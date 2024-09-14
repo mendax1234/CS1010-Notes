@@ -46,10 +46,12 @@ The reason is that we should make sure the priority of the month is higher.
 
 1. Remove the useless work, when the base is 0, -1 or 1.
 
-<pre class="language-c" data-full-width="false"><code class="lang-c"><strong>long compute_power(long x, long y)
-</strong><strong>{
-</strong><strong>    if (x == 0)
-</strong>    {
+{% code fullWidth="false" %}
+```c
+long compute_power(long x, long y)
+{
+    if (x == 0)
+    {
         return 0;
     }
     if (x == 1)
@@ -62,7 +64,8 @@ The reason is that we should make sure the priority of the month is higher.
     }
     // ...
 }
-</code></pre>
+```
+{% endcode %}
 
 2. Half the calculation
 
