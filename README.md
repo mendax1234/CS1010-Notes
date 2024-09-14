@@ -72,13 +72,11 @@ long compute_power(long x, long y)
 Recall that
 
 $$
-x^y=\begin{cases} 
+\huge x^y=\begin{cases} 
 \left(x^2\right)^{\frac{y}{2}} & \text{if } y \text{ is even} \\
 \left(x^2\right)^{\frac{y-1}{2}} \cdot x & \text{if } y \text{ is odd}
 \end{cases}
 $$
-
-
 
 Then convert it to code will be intuitive
 
