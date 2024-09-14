@@ -4,6 +4,6 @@
 
 ## Lab
 
-* [Lab 01](<README (2).md>)
+* [Lab 01](lab/lab-01.md)
 * [Lab 02](lab/lab-02.md)
-* [Lab 03](<README (1).md>)
+* [Lab 03](lab/lab-03.md)
