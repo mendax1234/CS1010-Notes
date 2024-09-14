@@ -4,7 +4,7 @@ description: Thanks for my Lab Tutor Zhang Puyu!
 
 # Lab 03
 
-## Assert Library
+Assert Library
 
 `assert.h` is a library designed to help with debugging procedures.
 
@@ -22,40 +22,62 @@ A solution that uses **no condition** is that $$m=n+(n\%2)*(n\%2)+1$$, where $$m
 
 <div data-full-width="false">
 
-<figure><img src=".gitbook/assets/image.png" alt=""><figcaption><p>odd.c</p></figcaption></figure>
+<figure><img src=".gitbook/assets/odd.png" alt=""><figcaption><p>odd.c</p></figcaption></figure>
 
 </div>
 
-### multiple.c
+### multiple.c&#x20;
 
-It is not defined when we divide a non-zero number by 0.
+Modulo is not defined when we divide a **non-zero number** by 0. That is $$m\%0$$, where $$m\neq0$$, is **not defined!!!**
 
 ### date.c
 
 There is a method not using conditions. Map each $$(m,d)$$ date to the integer $$100m+d$$.
 
+{% hint style="info" %}
+The only criteria for coefficient of $$m$$ is that the coefficient must be bigger than the maximum days in a month, which is 31. So $$m\geq31$$ should be okay.
+
+The reason is that we should make sure the priority of the month is higher.
+{% endhint %}
+
 ### power.c
 
-Remove the useless work, when the base is 0, -1 or 1.
+#### Ways to optimize
 
-{% code fullWidth="false" %}
-```c
-if (x == 0)
-{
-    return 0;
-}
-if (x == 1)
-{
-    return 1;
-}
-if (x == -1)
-{
-    return y % 2 == 0 ? 1 : -1;
-}
-```
-{% endcode %}
+1. Remove the useless work, when the base is 0, -1 or 1.
 
-Half the calculation
+<pre class="language-c" data-full-width="false"><code class="lang-c"><strong>long compute_power(long x, long y)
+</strong><strong>{
+</strong><strong>    if (x == 0)
+</strong>    {
+        return 0;
+    }
+    if (x == 1)
+    {
+        return 1;
+    }
+    if (x == -1)
+    {
+        return y % 2 == 0 ? 1 : -1;
+    }
+    // ...
+}
+</code></pre>
+
+2. Half the calculation
+
+Recall that
+
+$$
+x^y=\begin{cases} 
+\left(x^2\right)^{\frac{y}{2}} & \text{if } y \text{ is even} \\
+\left(x^2\right)^{\frac{y-1}{2}} \cdot x & \text{if } y \text{ is odd}
+\end{cases}
+$$
+
+
+
+Then convert it to code will be intuitive
 
 ```c
 if (y % 2 == 0)
