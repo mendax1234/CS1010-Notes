@@ -1,7 +1,3 @@
----
-description: Thanks for my Lab Tutor Zhang Puyu!
----
+# Welcome
 
-# Lab 01
-
-Nothing much to note down. All about setting up the environment.
+Welcome to my notes for NUS CS1010 (AY24 S1)
