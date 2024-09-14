@@ -52,7 +52,7 @@ return other_things;
 
 #### No nested If
 
-If you code is like below
+If your code is like below
 
 ```c
 if (something_1)
@@ -187,7 +187,7 @@ If $$r=0$$, then we will get $$q$$ as the output. If $$0<r \leq m-1$$, then the 
 {% hint style="info" %}
 The case $$r=0$$ is equivalent to the case that $$n\%m=0$$
 
-The ccase $$0<r \leq m-1$$ is equivalent to the case that $$n\%m \neq 0$$
+The case $$0<r \leq m-1$$ is equivalent to the case that $$n\%m \neq 0$$
 {% endhint %}
 
 Thus, convert the result into `C` code
