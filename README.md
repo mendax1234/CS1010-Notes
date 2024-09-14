@@ -4,7 +4,76 @@ description: Thanks for my Lab Tutor Zhang Puyu!
 
 # Lab 03
 
-Assert Library
+## Exercise 1 Review
+
+### Code Style
+
+1. **Initialize** the variable immediately after the declaration.
+
+For example,
+
+```c
+// Not Recommended
+double num;
+num = cs1010_read_double();
+
+// Recommended
+double num = cs1010_read_double();
+```
+
+2. Do not declare the function and then implement it somewhere else (Usually after `main()`). **Implement your function right after the declaration**.
+
+#### No return after else
+
+Code Example
+
+```c
+// Not allowed
+if (something)
+{
+    return something;
+}
+else
+{
+    return other_things;
+}
+```
+
+Out of succient reasons, the `else` is of no use. So, we can simplify the code to below
+
+```c
+// Allowed
+if (something)
+{
+    return something;
+}
+return other_things;
+```
+
+#### No nested If
+
+If you code is like below
+
+```c
+if (something_1)
+{
+    if (something_2)
+    {
+        // do something
+    }
+}
+```
+
+Since there is only one `if` statement inside the "outer" `if`, so there is **no need** to use the **nested `if`.** And we can simplify it into
+
+```c
+if (something_1 && something_2)
+{
+    // do sommething
+}
+```
+
+## Assert Library
 
 `assert.h` is a library designed to help with debugging procedures.
 
@@ -72,7 +141,7 @@ long compute_power(long x, long y)
 Recall that
 
 $$
-\huge x^y=\begin{cases} 
+\large x^y=\begin{cases} 
 \left(x^2\right)^{\frac{y}{2}} & \text{if } y \text{ is even} \\
 \left(x^2\right)^{\frac{y-1}{2}} \cdot x & \text{if } y \text{ is odd}
 \end{cases}
@@ -90,4 +159,42 @@ return x * compute_power(x * x, (y - 1) / 2);
 
 ### taxi.c
 
-An interesting method to optimize the `ceil()` function in C.&#x20;
+#### A normal way to compute ceil()
+
+```c
+long ceil_of_quotient(long n, long m)
+{
+    if (n % m == 0)
+    {
+        return n / m;
+    }
+    return n / m + 1;
+}
+```
+
+#### A smart way to compute ceil()
+
+Suppose we want to calculate $$\lceil \frac{n}{m} \rceil$$, where $$n$$ and $$m$$ are two possitive integers.
+
+First, let us write $$n=mq+r$$, where $$q\geq0$$ and $$0 \leq r \leq m-1$$. Now, let's consider
+
+$$
+\large\frac{n+m-1}{m}=\frac{mq+r+m-1}{m}=\frac{m(q+1)+r-1}{m}
+$$
+
+If $$r=0$$, then we will get $$q$$ as the output. If $$0<r \leq m-1$$, then the above numerator is at least $$m(q+1)$$ but strictly less than $$m(q+2)$$, so the quotient evaluates to $$q+1$$, which will be our output.
+
+{% hint style="info" %}
+The case $$r=0$$ is equivalent to the case that $$n\%m=0$$
+
+The ccase $$0<r \leq m-1$$ is equivalent to the case that $$n\%m \neq 0$$
+{% endhint %}
+
+Thus, convert the result into `C` code
+
+```c
+long ceil_of_quotient(long n, long m)
+{
+    return (n + m - 1) / m;
+}
+```
