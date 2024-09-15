@@ -4,7 +4,7 @@ description: Thanks for my tutor Eric Han!
 
 # Tut 02
 
-oblem Set 3
+## Problem Set 3
 
 ### Problem 3.1
 
@@ -68,3 +68,32 @@ If the number is bigger, we will find that the optimized version is much much fa
 
 </details>
 
+## Problem Set 8
+
+### Problem 8.1
+
+#### Problem 8.1(a)
+
+<figure><picture><source srcset="../.gitbook/assets/tut02-05-dark.png" media="(prefers-color-scheme: dark)"><img src="../.gitbook/assets/tut02-05-light.png" alt=""></picture><figcaption><p>Flowchart for (q)</p></figcaption></figure>
+
+From this chart, we can directly see that the last condition `if (x==y)` is duplicate. But let's take a step down further, our `max` can only be either `x` or `y`, that means we only need **one** condition check. So, we can see that `if (x < y)` is actually also duplicate.
+
+
+
+#### Problem 8.1(b)
+
+<figure><picture><source srcset="../.gitbook/assets/tut02-06-dark.png" media="(prefers-color-scheme: dark)"><img src="../.gitbook/assets/tut02-06-light.png" alt=""></picture><figcaption><p>Flowchart for 8.1(b)</p></figcaption></figure>
+
+Now, this is the succinct one.
+
+### Problem 8.2
+
+<figure><img src="../.gitbook/assets/tut02-07-light.png" alt=""><figcaption><p>Flowchart for 8.2</p></figcaption></figure>
+
+<details>
+
+<summary>So, what's the use of starting from the <strong>middle</strong> instead of starting from the start?</summary>
+
+This kind of method will make sure every time we will check for 2 times while the one that starts from the first will check 3 times in the worst case and 1 time in the best case.
+
+</details>
