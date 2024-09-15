@@ -17,8 +17,8 @@ There are two reasons for (d) to be incorrect
 
 ### Problem 2.2
 
-<img src="../.gitbook/assets/file.excalidraw.svg" alt="Flow chart for Problem 2.2" class="gitbook-drawing">
+<img src="../.gitbook/assets/file.excalidraw.svg" alt="Flowchart for Problem 2.2" class="gitbook-drawing">
 
 ### Problem 2.3
 
-<img src="../.gitbook/assets/file.excalidraw (1).svg" alt="" class="gitbook-drawing">
+<img src="../.gitbook/assets/file.excalidraw (1).svg" alt="Flowchart for Problem 2.3" class="gitbook-drawing">
