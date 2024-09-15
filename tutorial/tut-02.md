@@ -88,7 +88,7 @@ Now, this is the succinct one.
 
 ### Problem 8.2
 
-<figure><img src="../.gitbook/assets/tut02-07-light.png" alt=""><figcaption><p>Flowchart for 8.2</p></figcaption></figure>
+<figure><picture><source srcset="../.gitbook/assets/tut02-07-dark.png" media="(prefers-color-scheme: dark)"><img src="../.gitbook/assets/tut02-07-light.png" alt=""></picture><figcaption><p>Flowchart for 8.2</p></figcaption></figure>
 
 <details>
 
