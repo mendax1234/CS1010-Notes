@@ -95,7 +95,7 @@ A solution that uses **no condition** is that $$m=n+(n\%2)*(n\%2)+1$$, where $$m
 
 </div>
 
-### multiple.c&#x20;
+### multiple.c
 
 Modulo is not defined when we divide a **non-zero number** by 0. That is $$m\%0$$, where $$m\neq0$$, is **not defined!!!**
 
@@ -135,15 +135,17 @@ long compute_power(long x, long y)
 }
 ```
 {% endcode %}
+
 2. Half the calculation
+
 Recall that
+
 $$
-\large x^y=\begin{cases} 
-\left(x^2\right)^{\frac{y}{2}} & \text{if } y \text{ is even} \\
-\left(x^2\right)^{\frac{y-1}{2}} \cdot x & \text{if } y \text{ is odd}
-\end{cases}
+\large x^y=\begin{cases} \left(x^2\right)^{\frac{y}{2}} & \text{if } y \text{ is even} \\ \left(x^2\right)^{\frac{y-1}{2}} \cdot x & \text{if } y \text{ is odd} \end{cases}
 $$
+
 Then convert it to code will be intuitive
+
 ```c
 if (y % 2 == 0)
 {
@@ -166,22 +168,19 @@ long ceil_of_quotient(long n, long m)
     return n / m + 1;
 }
 ```
+
 #### A smart way to compute ceil()
-Suppose we want to calculate $$\lceil \frac{n}{m} \rceil$$, where $$n$$ and $$m$$ are two possitive integers.
-First, let us write $$n=mq+r$$, where $$q\geq0$$ and $$0 \leq r \leq m-1$$. Now, let's consider
+
+Suppose we want to calculate $$\lceil \frac{n}{m} \rceil$$, where $$n$$ and $$m$$ are two possitive integers. First, let us write $$n=mq+r$$, where $$q\geq0$$ and $$0 \leq r \leq m-1$$. Now, let's consider
+
 $$
 \large\frac{n+m-1}{m}=\frac{mq+r+m-1}{m}=\frac{m(q+1)+r-1}{m}
 $$
+
 If $$r=0$$, then we will get $$q$$ as the output. If $$0<r \leq m-1$$, then the above numerator is at least $$m(q+1)$$ but strictly less than $$m(q+2)$$, so the quotient evaluates to $$q+1$$, which will be our output.
+
 {% hint style="info" %}
-The case $$r=0$$ is equivalent to the case that $$n\%m=0$$
-The case $$0<r \leq m-1$$ is equivalent to the case that $$n\%m \neq 0$$
+The case $$r=0$$ is equivalent to the case that $$n\%m=0$$ The case $$0<r \leq m-1$$ is equivalent to the case that $$n\%m \neq 0$$
 {% endhint %}
-Thus, convert the result into `C` code
-```c
-long ceil_of_quotient(long n, long m)
-{
-    return (n + m - 1) / m;
-}
-```
-	
+
+Thus, convert the result into \`C\` code \`\`\`c long ceil\_of\_quotient(long n, long m) { return (n + m - 1) / m; } \`\`\`
