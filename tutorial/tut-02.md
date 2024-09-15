@@ -50,5 +50,21 @@ Using this idea, we can form our solution
 
 Now, we should ask ourselves the same questions. Can we still optimize it? The answer is absolutely yes right. Using the similar idea we have introduced in [#problem-3.2-a](tut-02.md#problem-3.2-a "mention"), we can apply **"half"** on this problem as well.
 
+You can find the solution at [#power.c](../lab/lab-03.md#power.c "mention").
 
+<details>
+
+<summary>Is this algorithm truly optimized?</summary>
+
+Yes! Did you remember that in the [#problem-3.2-a](tut-02.md#problem-3.2-a "mention"), by using the idea of "half", our algorithm is not truly optimized. But in this probelm, the algorithm is truly optimized.
+
+We can think of this example, if we want to calculate $$2^{10}$$
+
+Using the naive recursion, we need to calculate $$2^9,2^8,...,2^2,2^1.$$ That means we will call our `pow(i, j)` for 9 times.
+
+However, using the optimized recursion, we only need to know $$4^5,8^2,16^1$$. We have optimized our times to 4 now.
+
+If the number is bigger, we will find that the optimized version is much much faster than the naive recursion solution.
+
+</details>
 
