@@ -17,8 +17,8 @@ There are two reasons for (d) to be incorrect
 
 ### Problem 2.2
 
-<figure><picture><source srcset="../.gitbook/assets/tut01-02-dark.png" media="(prefers-color-scheme: dark)"><img src="../.gitbook/assets/tut01-02-light.png" alt=""></picture><figcaption></figcaption></figure>
+<figure><picture><source srcset="../.gitbook/assets/tut01-02-dark.png" media="(prefers-color-scheme: dark)"><img src="../.gitbook/assets/tut01-02-light.png" alt=""></picture><figcaption><p>Flowchart for Problem 2.2</p></figcaption></figure>
 
 ### Problem 2.3
 
-<figure><picture><source srcset="../.gitbook/assets/tut01-03-dark.png" media="(prefers-color-scheme: dark)"><img src="../.gitbook/assets/tut01-03-light.png" alt=""></picture><figcaption></figcaption></figure>
+<figure><picture><source srcset="../.gitbook/assets/tut01-03-dark.png" media="(prefers-color-scheme: dark)"><img src="../.gitbook/assets/tut01-03-light.png" alt=""></picture><figcaption><p>Flowchart for Problem 2.3</p></figcaption></figure>
