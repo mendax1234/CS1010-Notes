@@ -97,3 +97,30 @@ Now, this is the succinct one.
 This kind of method will make sure every time we will check for 2 times while the one that starts from the first will check 3 times in the worst case and 1 time in the best case.
 
 </details>
+
+Then, based on our flowchart, we can easily convert it to the `if-else` statement
+
+```c
+if (score >= 5)
+{
+    if (score >= 8)
+    {
+        printf("A");
+    }
+    else
+    {
+        printf("B");
+    }
+}
+else
+{
+    if (score >= 3)
+    {
+        printf("C");
+    }
+    else
+    {
+        printf("D");
+    }
+}
+```
