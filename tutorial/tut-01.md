@@ -17,8 +17,8 @@ There are two reasons for (d) to be incorrect
 
 ### Problem 2.2
 
-<img src="../.gitbook/assets/file.excalidraw.svg" alt="Flowchart for Problem 2.2" class="gitbook-drawing">
+<figure><picture><source srcset="../.gitbook/assets/tut01-02-dark.png" media="(prefers-color-scheme: dark)"><img src="../.gitbook/assets/tut01-02-light.png" alt=""></picture><figcaption></figcaption></figure>
 
 ### Problem 2.3
 
-<img src="../.gitbook/assets/file.excalidraw (1).svg" alt="Flowchart for Problem 2.3" class="gitbook-drawing">
+<figure><picture><source srcset="../.gitbook/assets/tut01-03-dark.png" media="(prefers-color-scheme: dark)"><img src="../.gitbook/assets/tut01-03-light.png" alt=""></picture><figcaption></figcaption></figure>
