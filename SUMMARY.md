@@ -4,7 +4,8 @@
 
 ## LECTURE
 
-* [Lec 6](lecture/lec-6.md)
+* [Lec 6](lecture/lec-6/README.md)
+  * [Diagnostic Quiz](lecture/lec-6/diagnostic-quiz.md)
 
 ## Tutorial
 
