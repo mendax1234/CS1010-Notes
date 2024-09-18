@@ -12,6 +12,7 @@
 * [Tut 01](tutorial/tut-01.md)
 * [Tut 02](tutorial/tut-02.md)
 * [Tut 03](tutorial/tut-03.md)
+* [Tut 04](tutorial/tut-04.md)
 
 ## Lab
 
