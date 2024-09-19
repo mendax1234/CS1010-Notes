@@ -19,3 +19,4 @@
 * [Lab 01](lab/lab-01.md)
 * [Lab 02](lab/lab-02.md)
 * [Lab 03](lab/lab-03.md)
+* [Lab 04](lab/lab-04.md)
