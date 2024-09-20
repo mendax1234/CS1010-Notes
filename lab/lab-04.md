@@ -73,7 +73,7 @@ We should then deal with the special case where $$n$$ is a perfect square (a per
 
 <summary>Proof of 2.</summary>
 
-$$\begin{center} \end{center}$$If $$i$$ divides $$n$$, then we can write $$n=qi$$, where $$q\neq0$$. Manipulate this equation, we know $$q=\frac{n}{i}$$. So, now our problem becomes does $$q$$ divide $$n$$? This answer is obvious yes right, since we already know that $$n=qi$$. Proof!
+If $$i$$ divides $$n$$, then we can write $$n=qi$$, where $$q\neq0$$. Manipulate this equation, we know $$q=\frac{n}{i}$$. So, now our problem becomes does $$q$$ divide $$n$$ right? This answer is obvious yes right, since we already know that $$n=qi$$. Proof!
 
 </details>
 
