@@ -132,3 +132,14 @@ Use proof by contracdiction also. If this number (**n**) is not a prime. That me
 </details>
 
 Number of operations in the worst case: upper-bounded by $$nlog(log(n))$$ (fewer than $$n\sqrt{n}$$).
+
+<details>
+
+<summary>Proof</summary>
+
+The proof is far beyond the scope of this course and contains much mathematical knowledge. I haven't digged deep into it but below are some useful resources:
+
+1. [https://en.wikipedia.org/wiki/Divergence\_of\_the\_sum\_of\_the\_reciprocals\_of\_the\_primes#Proof\_that\_the\_series\_exhibits\_log-log\_growth](https://en.wikipedia.org/wiki/Divergence\_of\_the\_sum\_of\_the\_reciprocals\_of\_the\_primes#Proof\_that\_the\_series\_exhibits\_log-log\_growth)
+2. [https://github.com/Z-Puyu/lecture-notes/blob/MA2214-Combinatorics-and-Graphs-I/Combinatorics%20and%20Graphs%20I.pdf](https://github.com/Z-Puyu/lecture-notes/blob/MA2214-Combinatorics-and-Graphs-I/Combinatorics%20and%20Graphs%20I.pdf)(Page 30)
+
+</details>
