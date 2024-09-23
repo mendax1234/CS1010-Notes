@@ -21,11 +21,11 @@
 * [Lab 03](lab/lab-03.md)
 * [Lab 04](lab/lab-04.md)
 
-## Toolbox
-
-* [GDB](toolbox/gdb.md)
-
 ## Past Year Exam
 
 * [Midterm PE](past-year-exam/midterm-pe/README.md)
   * [PE1 (AY18/19)](past-year-exam/midterm-pe/pe1-ay18-19.md)
+
+## Toolbox
+
+* [GDB](toolbox/gdb.md)
