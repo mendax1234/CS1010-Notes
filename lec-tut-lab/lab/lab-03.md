@@ -91,7 +91,7 @@ A solution that uses **no condition** is that $$m=n+(n\%2)*(n\%2)+1$$, where $$m
 
 <div data-full-width="false">
 
-<figure><img src=".gitbook/assets/odd.png" alt=""><figcaption><p>odd.c</p></figcaption></figure>
+<figure><img src="../../lab/.gitbook/assets/odd.png" alt=""><figcaption><p>odd.c</p></figcaption></figure>
 
 </div>
 

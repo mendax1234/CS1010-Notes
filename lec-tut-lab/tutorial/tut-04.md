@@ -10,7 +10,7 @@ description: Big thanks for my tutor Eric Han!
 
 To get a better understanding of the code, we can draw the flowchart first.
 
-<figure><picture><source srcset="../.gitbook/assets/tut04-01-dark.png" media="(prefers-color-scheme: dark)"><img src="../.gitbook/assets/tut04-01-light.png" alt=""></picture><figcaption><p>Problem 11.1</p></figcaption></figure>
+<figure><picture><source srcset="../../.gitbook/assets/tut04-01-dark.png" media="(prefers-color-scheme: dark)"><img src="../../.gitbook/assets/tut04-01-light.png" alt=""></picture><figcaption><p>Problem 11.1</p></figcaption></figure>
 
 Before we analyze this problem, let's talk about **how we can judge whether an algorithm** is correct or incorrect.
 
@@ -106,7 +106,7 @@ Loop invariant, however, is **not unique**. We can write down infinitely many lo
 
 To find a good and useful loop invariant, we'd better to know what **mathematical induction (or proof by induction) is.** For more detail, please see [#mathematical-induction](../lab/lab-02.md#mathematical-induction "mention").
 
-<figure><img src="../.gitbook/assets/tut04-02.png" alt=""><figcaption><p>Flowchart for part (a)</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/tut04-02.png" alt=""><figcaption><p>Flowchart for part (a)</p></figcaption></figure>
 
 In this problem, our base case is when $$m=l_0,i=1$$. And since we want to relate our **loop invariant** to our input `k` and our purpose _find the maximum number among the list_ so that our **loop invariant** is useful. So, we may redefine our base case statment as:
 
