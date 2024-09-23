@@ -1,2 +1,3 @@
 # Lecture
 
+d&#x20;
