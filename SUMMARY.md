@@ -22,6 +22,7 @@
 
 * [Midterm PE](past-year-exam/midterm-pe/README.md)
   * [PE1 (AY18/19)](past-year-exam/midterm-pe/pe1-ay18-19.md)
+  * [PE1 (AY20/21)](past-year-exam/midterm-pe/pe1-ay20-21.md)
 
 ## Toolbox
 
