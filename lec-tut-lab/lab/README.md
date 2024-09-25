@@ -1,2 +1,6 @@
+---
+description: Lab Notes
+---
+
 # Lab
 

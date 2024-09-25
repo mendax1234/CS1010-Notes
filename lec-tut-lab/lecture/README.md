@@ -1,3 +1,6 @@
+---
+description: Lecture Notes
+---
+
 # Lecture
 
-d&#x20;
