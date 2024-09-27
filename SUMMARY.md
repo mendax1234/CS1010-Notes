@@ -24,6 +24,7 @@
   * [PE1 (AY18/19)](past-year-exam/midterm-pe/pe1-ay18-19.md)
   * [PE1 (AY20/21)](past-year-exam/midterm-pe/pe1-ay20-21.md)
   * [PE1 (AY21/22)](past-year-exam/midterm-pe/pe1-ay21-22.md)
+  * [PE0 (AY22/23)](past-year-exam/midterm-pe/pe0-ay22-23.md)
 
 ## Toolbox
 
