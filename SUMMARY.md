@@ -5,8 +5,9 @@
 ## Lec/Tut/Lab
 
 * [Lecture](lec-tut-lab/lecture/README.md)
-  * [Lec 6](lec-tut-lab/lecture/lec-6/README.md)
-    * [Diagnostic Quiz](lec-tut-lab/lecture/lec-6/diagnostic-quiz.md)
+  * [Lec 06](lec-tut-lab/lecture/lec-06/README.md)
+    * [Diagnostic Quiz](lec-tut-lab/lecture/lec-06/diagnostic-quiz.md)
+  * [Lec 07](lec-tut-lab/lecture/lec-07.md)
 * [Tutorial](lec-tut-lab/tutorial/README.md)
   * [Tut 01](lec-tut-lab/tutorial/tut-01.md)
   * [Tut 02](lec-tut-lab/tutorial/tut-02.md)
@@ -25,6 +26,7 @@
   * [PE1 (AY20/21)](past-year-exam/midterm-pe/pe1-ay20-21.md)
   * [PE1 (AY21/22)](past-year-exam/midterm-pe/pe1-ay21-22.md)
   * [PE0 (AY22/23)](past-year-exam/midterm-pe/pe0-ay22-23.md)
+  * [PE0 (AY23/24)](past-year-exam/midterm-pe/pe0-ay23-24.md)
 
 ## Toolbox
 
