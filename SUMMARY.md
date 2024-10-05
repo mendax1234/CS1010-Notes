@@ -31,6 +31,7 @@
   * [PE0 (AY24/25)](past-year-exam/midterm-pe/pe0-ay24-25.md)
 * [Midterm Paper](past-year-exam/midterm-paper/README.md)
   * [Midterm (AY18/19)](past-year-exam/midterm-paper/midterm-ay18-19.md)
+  * [Midterm (AY20/21)](past-year-exam/midterm-paper/midterm-ay20-21.md)
 
 ## Toolbox
 
