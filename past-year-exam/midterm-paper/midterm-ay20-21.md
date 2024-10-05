@@ -29,6 +29,25 @@ Then, what we need to do is to find all the **rows** that make the output **True
 is_with_gf || (!is_with_mom && is_raining)
 ```
 
+### 10. Invariant
+
+<figure><img src="../../.gitbook/assets/Midterm-2021-Q10.png" alt=""><figcaption><p>Q10</p></figcaption></figure>
+
+This question is another tricky question about the **invariant**. But before we start finding the invariant, let's find what the code is doing by substituting some numbers in.
+
+After a series of trial and error, we may find that the function is basically doing `res = n/3 + n/7`. And we should find out that `n = i-1`. Using these two results, we can form our invariant that relates `res` and `i` as `res = (i - 1)/3 + (i - 1)/7`. And we start proving that the loop variant holds at Line A.
+
+***
+
+**Proof:**
+
+Let's assume that the loop invariant holds at the start of the loop. After that, we may or may not enter the first `if` structure.
+
+1. Enter the `if` structure, which means `i % 3 == 0`. Now, our `res = (i - 1)/3 + (i - 1)/7 + 1`. Since `i % 3 == 0`, we can find that `i % 3 == (i - 1) % 3 + 1`. So, our invariant will become `res = i / 3 + (i - 1)/7`.
+2. Not enter the `if` structure, which means `i % 3 != 0`. Now, we can say the `(i - 1) / 3 == i / 3`, so we can also get `res = i / 3 + (i - 1)/7`.
+
+Simiarly, we can do the analysis on the second `if` structure and finally we will get `res = i/3 + i/7`. Now, we execute `i = i + 1`. Our invariant will become `res = (i - 1)/3 + (i - 1)/7`, which is the same as when we enter the loop.
+
 ### 11. Recursion
 
 <figure><img src="../../.gitbook/assets/Midterm-2021-Q11.png" alt=""><figcaption><p>Q11</p></figcaption></figure>
@@ -69,3 +88,4 @@ return ( c == 1 || (!(a % c == 0 && b % c == 0) && are_coprime_upto_c(a, b, c - 
 2. If the variables are not too much, always try the **Truth Table** Method since it will make your life and analysis much easier!
 3. "_Imprecisions using floating-point values might mean that certain conditions may be evaluated incorrectly_", this is occurred when you want to do the **equality test** between a floating number and an integer.
 4. When you want to form a single `return` statement in recursion, write out the normal `if-else` recursion first, then consider under whcih cases we will get `true` output.
+5. Before we try to form the invariant, do some examples and see what the code is doing!!!
