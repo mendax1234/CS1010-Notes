@@ -18,6 +18,7 @@
   * [Lab 02](lec-tut-lab/lab/lab-02.md)
   * [Lab 03](lec-tut-lab/lab/lab-03.md)
   * [Lab 04](lec-tut-lab/lab/lab-04.md)
+  * [Lab 05](lec-tut-lab/lab/lab-05.md)
 
 ## Past Year Exam
 
