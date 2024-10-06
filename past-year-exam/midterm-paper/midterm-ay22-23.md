@@ -12,6 +12,10 @@ Before we talk about this question, let's take a look at what are **redundant co
 
 > A condition is redundant if it is always true or always false.
 
+{% hint style="info" %}
+Note that this condition can be **part of** the logical expression!
+{% endhint %}
+
 Using this convention, we can easily see that for the option D, the `else if` condition is always `false`
 
 ```c
@@ -22,6 +26,8 @@ if (x > y) {
     bar();
 }
 ```
+
+For option C, since in the `else-if` block, we can always say that `x <= y`, which means `x > y` is always false, so the condition can be simplified as `else if (x == 0)`.
 
 ### 11. Flowchart
 
