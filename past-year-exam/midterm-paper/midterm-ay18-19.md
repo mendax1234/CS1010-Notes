@@ -109,7 +109,7 @@ This is a "give-away" question itself, but one thing we should pay attention to 
 
 <figure><img src="../../.gitbook/assets/Midterm-1819-Q12.png" alt=""><figcaption><p>Example Flowchart Convention</p></figcaption></figure>
 
-### 14. Invariant&#x20;
+### 14. Invariant\*&#x20;
 
 Before we dive into this question, let's recap what is a **loop invariant** from [CS1010 Notes](https://nus-cs1010.github.io/2425-s1/notes/12-invariant.html#loop-invariant):
 

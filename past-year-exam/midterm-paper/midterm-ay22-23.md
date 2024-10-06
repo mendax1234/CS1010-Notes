@@ -13,7 +13,7 @@ Before we talk about this question, let's take a look at what are **redundant co
 > A condition is redundant if it is always true or always false.
 
 {% hint style="info" %}
-Note that this condition can be **part of** the logical expression!
+Note that this condition can be **part of** the logical expression! So, if we can find any part of the logical expression that is always `true` or `false`, and if this part is a comparison, then this part will be a redundant comparison
 {% endhint %}
 
 Using this convention, we can easily see that for the option D, the `else if` condition is always `false`
@@ -29,7 +29,7 @@ if (x > y) {
 
 For option C, since in the `else-if` block, we can always say that `x <= y`, which means `x > y` is always false, so the condition can be simplified as `else if (x == 0)`.
 
-### 11. Flowchart
+### 11. Flowchart\*
 
 Whenever you encounter a flowchart that contains the below pattern,
 
@@ -37,9 +37,15 @@ Whenever you encounter a flowchart that contains the below pattern,
 
 Create a **new** `if` block when converting it into `C` code!!!
 
-### 12. Recursion
+### 12. Recursion\*
 
 Also a very good type of question to test your recursion thinking. Worth to try again.
+
+{% hint style="info" %}
+Note that in this question, the **0** is skipped!!!
+{% endhint %}
+
+
 
 ## Tips
 

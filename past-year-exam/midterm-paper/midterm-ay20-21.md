@@ -29,7 +29,7 @@ Then, what we need to do is to find all the **rows** that make the output **True
 is_with_gf || (!is_with_mom && is_raining)
 ```
 
-### 10. Invariant
+### 10. Invariant\*
 
 <figure><img src="../../.gitbook/assets/Midterm-2021-Q10.png" alt=""><figcaption><p>Q10</p></figcaption></figure>
 
@@ -48,7 +48,13 @@ Let's assume that the loop invariant holds at the start of the loop. After that,
 
 Simiarly, we can do the analysis on the second `if` structure and finally we will get `res = i/3 + i/7`. Now, we execute `i = i + 1`. Our invariant will become `res = (i - 1)/3 + (i - 1)/7`, which is the same as when we enter the loop.
 
-### 11. Recursion
+{% hint style="info" %}
+Sometimes if it is hard to prove the **loop invariant** from forward, we can use the answer and try to prove it backward (think of what we want at last and then think forwardly about how can we get that)
+{% endhint %}
+
+
+
+### 11. Recursion\*
 
 <figure><img src="../../.gitbook/assets/Midterm-2021-Q11.png" alt=""><figcaption><p>Q11</p></figcaption></figure>
 
@@ -86,6 +92,6 @@ return ( c == 1 || (!(a % c == 0 && b % c == 0) && are_coprime_upto_c(a, b, c - 
 
 1. As discussed in [#problem-11.1](../../lec-tut-lab/tutorial/tut-04.md#problem-11.1 "mention"). To prove a program is false, **one counterexample** is enough. But to prove an algorithm is **true,** we may use **assertion** or some other proof techniques. Usually try to find counterexample first!!!
 2. If the variables are not too much, always try the **Truth Table** Method since it will make your life and analysis much easier!
-3. "_Imprecisions using floating-point values might mean that certain conditions may be evaluated incorrectly_", this is occurred when you want to do the **equality test** between a floating number and an integer.
-4. When you want to form a single `return` statement in recursion, write out the normal `if-else` recursion first, then consider under whcih cases we will get `true` output.
+3. "_Imprecisions using floating-point values might mean that certain conditions may be evaluated incorrectly_", this occurred when you want to do the **equality test** between a floating number and an integer.
+4. When you want to form a single `return` statement in recursion, write out the normal `if-else` recursion first, then consider under which cases we will get `true` output.
 5. Before we try to form the invariant, do some examples and see what the code is doing!!!
