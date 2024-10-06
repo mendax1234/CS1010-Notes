@@ -28,6 +28,21 @@ The answer is yes. We can **divide** our problem into smaller ones by halving th
 
 <figure><picture><source srcset="../../.gitbook/assets/tut02-03-dark.png" media="(prefers-color-scheme: dark)"><img src="../../.gitbook/assets/tut02-03-light.png" alt=""></picture><figcaption><p>Flowchart for the optimzied recursion</p></figcaption></figure>
 
+{% hint style="info" %}
+Also, notice that for our list, its last element is $$L[list -1]$$, and in this flowchart, we are assuming that `sum()` is **left-closed and right-open**. Otherwise, we should make some small changes below
+
+{% code title="Changes.c" %}
+```c
+// Base case
+left == right - 1
+
+// Recursion cases
+sum(left, (left + right) / 2, list)
+sum((left + right) / 2, right, list)
+```
+{% endcode %}
+{% endhint %}
+
 <details>
 
 <summary>Is this truly "optimized"</summary>
