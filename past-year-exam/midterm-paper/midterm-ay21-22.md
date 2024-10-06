@@ -1,4 +1,4 @@
-# Midterm AY21/22
+# Midterm (AY21/22)
 
 ## Problems
 
