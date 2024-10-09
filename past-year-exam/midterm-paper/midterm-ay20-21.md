@@ -90,7 +90,7 @@ return ( c == 1 || (!(a % c == 0 && b % c == 0) && are_coprime_upto_c(a, b, c - 
 
 ## Tips
 
-1. As discussed in [#problem-11.1](../../lec-tut-lab/tutorial/tut-04.md#problem-11.1 "mention"). To prove a program is false, **one counterexample** is enough. But to prove an algorithm is **true,** we may use **assertion** or some other proof techniques. Usually try to find counterexample first!!!
+1. As discussed in [#problem-11.1](../../lec-tut-lab-exes/tutorial/tut-04.md#problem-11.1 "mention"). To prove a program is false, **one counterexample** is enough. But to prove an algorithm is **true,** we may use **assertion** or some other proof techniques. Usually try to find counterexample first!!!
 2. If the variables are not too much, always try the **Truth Table** Method since it will make your life and analysis much easier!
 3. "_Imprecisions using floating-point values might mean that certain conditions may be evaluated incorrectly_", this occurred when you want to do the **equality test** between a floating number and an integer.
 4. When you want to form a single `return` statement in recursion, write out the normal `if-else` recursion first, then consider under which cases we will get `true` output.

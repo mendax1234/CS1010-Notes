@@ -115,7 +115,7 @@ Before we dive into this question, let's recap what is a **loop invariant** from
 
 > A loop invariant is an assertion that is true **before the loop**, **after each iteration of the loop**, and **after the loop**.
 
-And usually, to prove that the **loop invariant** holds **after each iteration of the loop,** we can use [#wishful-thinking](../../lec-tut-lab/lab/lab-02.md#wishful-thinking "mention") a.k.a [#mathematical-induction](../../lec-tut-lab/lab/lab-02.md#mathematical-induction "mention"). So, it will be equal to to show that:
+And usually, to prove that the **loop invariant** holds **after each iteration of the loop,** we can use [#wishful-thinking](../../lec-tut-lab-exes/lab/lab-02.md#wishful-thinking "mention") a.k.a [#mathematical-induction](../../lec-tut-lab-exes/lab/lab-02.md#mathematical-induction "mention"). So, it will be equal to to show that:
 
 1. it is true at the end of the **first** iteration of the loop
 2. if it is true at the end of the $$k$$-th iteration of the loop, then it is true at the end of the $$(k+1)$$-th iteration.

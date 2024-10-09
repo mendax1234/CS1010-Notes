@@ -2,23 +2,25 @@
 
 * [Welcome](README.md)
 
-## Lec/Tut/Lab
+## Lec/Tut/Lab/Exes
 
-* [Lecture](lec-tut-lab/lecture/README.md)
-  * [Lec 06](lec-tut-lab/lecture/lec-06/README.md)
-    * [Diagnostic Quiz](lec-tut-lab/lecture/lec-06/diagnostic-quiz.md)
-  * [Lec 07](lec-tut-lab/lecture/lec-07.md)
-* [Tutorial](lec-tut-lab/tutorial/README.md)
-  * [Tut 01](lec-tut-lab/tutorial/tut-01.md)
-  * [Tut 02](lec-tut-lab/tutorial/tut-02.md)
-  * [Tut 03](lec-tut-lab/tutorial/tut-03.md)
-  * [Tut 04](lec-tut-lab/tutorial/tut-04.md)
-* [Lab](lec-tut-lab/lab/README.md)
-  * [Lab 01](lec-tut-lab/lab/lab-01.md)
-  * [Lab 02](lec-tut-lab/lab/lab-02.md)
-  * [Lab 03](lec-tut-lab/lab/lab-03.md)
-  * [Lab 04](lec-tut-lab/lab/lab-04.md)
-  * [Lab 05](lec-tut-lab/lab/lab-05.md)
+* [Lecture](lec-tut-lab-exes/lecture/README.md)
+  * [Lec 06](lec-tut-lab-exes/lecture/lec-06/README.md)
+    * [Diagnostic Quiz](lec-tut-lab-exes/lecture/lec-06/diagnostic-quiz.md)
+  * [Lec 07](lec-tut-lab-exes/lecture/lec-07.md)
+* [Tutorial](lec-tut-lab-exes/tutorial/README.md)
+  * [Tut 01](lec-tut-lab-exes/tutorial/tut-01.md)
+  * [Tut 02](lec-tut-lab-exes/tutorial/tut-02.md)
+  * [Tut 03](lec-tut-lab-exes/tutorial/tut-03.md)
+  * [Tut 04](lec-tut-lab-exes/tutorial/tut-04.md)
+* [Lab](lec-tut-lab-exes/lab/README.md)
+  * [Lab 01](lec-tut-lab-exes/lab/lab-01.md)
+  * [Lab 02](lec-tut-lab-exes/lab/lab-02.md)
+  * [Lab 03](lec-tut-lab-exes/lab/lab-03.md)
+  * [Lab 04](lec-tut-lab-exes/lab/lab-04.md)
+  * [Lab 05](lec-tut-lab-exes/lab/lab-05.md)
+* [Exercises](lec-tut-lab-exes/exercises/README.md)
+  * [Exercise 3 - Fixed-Length Arrays](lec-tut-lab-exes/exercises/exercise-3-fixed-length-arrays.md)
 
 ## Past Year Exam
 
