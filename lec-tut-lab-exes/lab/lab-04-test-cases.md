@@ -2,7 +2,7 @@
 description: Thanks for my Lab Tutor Zhang Puyu
 ---
 
-# Lab 04
+# Lab 04 - Test Cases
 
 ## Testing
 
@@ -59,7 +59,7 @@ long find_least_significant_9(long n) {
 Optimization methods:
 
 1. $$n-1\rightarrow  \frac{n}{2}$$ since anything bigger than $$\frac{n}{2}$$ for sure cannot divide $$n$$!
-2. If $$i$$ divides $$n$$, then surely $$\frac{n}{i}$$ divides $$n$$ as well. See [#proof-of-2](lab-04.md#proof-of-2 "mention")
+2. If $$i$$ divides $$n$$, then surely $$\frac{n}{i}$$ divides $$n$$ as well. See [#proof-of-2](lab-04-test-cases.md#proof-of-2 "mention")
 
 The above implies that we can count factors in **pairs**.
 
