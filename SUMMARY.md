@@ -8,6 +8,7 @@
   * [Lec 06 - Call Stacks, Arrays](lec-tut-lab-exes/lecture/lec-06-call-stacks-arrays/README.md)
     * [Diagnostic Quiz](lec-tut-lab-exes/lecture/lec-06-call-stacks-arrays/diagnostic-quiz.md)
   * [Lec 07 - Pointers, Memory management](lec-tut-lab-exes/lecture/lec-07-pointers-memory-management.md)
+  * [Lec 08 - Multi-d Array, Efficiency](lec-tut-lab-exes/lecture/lec-08-multi-d-array-efficiency.md)
 * [Tutorial](lec-tut-lab-exes/tutorial/README.md)
   * [Tut 01](lec-tut-lab-exes/tutorial/tut-01.md)
   * [Tut 02](lec-tut-lab-exes/tutorial/tut-02.md)
