@@ -152,7 +152,7 @@ for (long i = 0; i < 10; i += 1) {
 
 <figure><img src="../.gitbook/assets/fixed-size-array-of-dynamic-array.png" alt="" width="563"><figcaption><p>A fixed size array of dynamically allocated memory</p></figcaption></figure>
 
-This is the same you already know the number of **rows** in your array before you run your program, but you don't know the number of **cols** before you run your program. So, we may use dynamic array to achieve this.
+This is used when you already know the number of **rows** in your array before you run your program, but you don't know the number of **cols** before you run your program. So, we may use dynamic array to achieve this.
 
 #### Dynamically Size 2D Array <a href="#dynamically-size-2d-array" id="dynamically-size-2d-array"></a>
 
@@ -345,7 +345,6 @@ long **read_matrix(size_t nrows, size_t ncols)
     // create
     long **m = malloc(nrows * sizeof(long *));
     if (m == NULL) {
-        free(m);
         return NULL;
     }
     for (size_t i = 0; i < nrows; i += 1) {
@@ -407,6 +406,17 @@ while (*str != '\0')
     str += 1;
 }
 free(str);
+```
+
+To traverse from the end of a string (knowing the length of a string), it is recommended to cast the loop variable (e.g. `i`) as `long`. For example
+
+```c
+void traverse_backward(char *num1, size_t len1)
+{
+    for (long i = (long)len1 - 1; i >= 0; i -= 1) {
+        // do something
+    }
+}
 ```
 
 #### Check the existence of a word in a line
