@@ -222,6 +222,7 @@ long *marks;
 marks = cs1010_read_long_array(num_of_students);
 if (marks == NULL) {
   // signal error and return
+  // No need to free marks since allocation unsuccessful
 }
 for (size_t i = 0; i < num_of_students; i += 1) {
   cs1010_println_long(marks[i]);
@@ -243,13 +244,14 @@ Returns `k` numbers of `double` values read from the standard input stored in an
 
 #### `char** cs1010_read_word_array(size_t k)` <a href="#char-cs1010_read_word_arraysize_t-k" id="char-cs1010_read_word_arraysize_t-k"></a>
 
-Returns `k` white-space-separated words read from the standard input stored in an array. The notion of "word" is the same as `cs1010_read_word()`.
+Returns `k` white-space-separated words read from the standard input stored in an array. The notion of "word" is the same as `cs1010_read_word()`. **(A quicker way to read in a jagged array)**
 
 ```c
 size_t k = cs1010_read_size_t();
 char** words = cs1010_read_word_array(k);
 if (words == NULL) {
   // Deal with error
+  // No need to free words since allocation unsuccessful
 } else {
   // Do something with the array words
    :
@@ -263,14 +265,14 @@ if (words == NULL) {
 
 #### `char** cs1010_read_line_array(size_t k)` <a href="#char-cs1010_read_line_arraysize_t-k" id="char-cs1010_read_line_arraysize_t-k"></a>
 
-Returns `k` new-line-separated words read from the standard input stored in an array. The notion of a line is the same as `cs1010_read_line()`.
+Returns `k` new-line-separated words read from the standard input stored in an array. The notion of a line is the same as `cs1010_read_line()`. **(A quicker way to read in a jagged array)**
 
 ```c
 size_t k = cs1010_read_size_t();
 char** lines = cs1010_read_line_array(k);
 if (lines == NULL) {
   // Deal with error
-  // No need to free since allocation unsuccessful
+  // No need to free lines since allocation unsuccessful
 } else {
   // Do something with the array lines
     :
@@ -281,6 +283,10 @@ if (lines == NULL) {
   free(lines);
 }
 ```
+
+{% hint style="info" %}
+Using [#char-cs1010\_read\_word\_arraysize\_t-k](pe1-review.md#char-cs1010\_read\_word\_arraysize\_t-k "mention") and [#char-cs1010\_read\_line\_arraysize\_t-k](pe1-review.md#char-cs1010\_read\_line\_arraysize\_t-k "mention") can save us the trouble from dealing with the inner Null pointer check. **We only need to judge whether the pointer returned is NULL or not**. (Applies to all four I/O functions here)
+{% endhint %}
 
 ## Important Functions
 
