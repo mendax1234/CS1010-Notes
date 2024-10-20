@@ -150,7 +150,7 @@ for (long i = 0; i < 10; i += 1) {
 }
 ```
 
-<figure><img src="../.gitbook/assets/fixed-size-array-of-dynamic-array.png" alt=""><figcaption><p>A fixed size array of dynamically allocated memory</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/fixed-size-array-of-dynamic-array.png" alt="" width="563"><figcaption><p>A fixed size array of dynamically allocated memory</p></figcaption></figure>
 
 This is the same you already know the number of **rows** in your array before you run your program, but you don't know the number of **cols** before you run your program. So, we may use dynamic array to achieve this.
 
@@ -449,7 +449,50 @@ long find_pos(char *word, char *line)
 }
 ```
 
+#### String.h
+
+1. `size_t strlen(const char *s)`, which will return the length of a string as `size_t`.
+
+### Sliding Window
+
+#### To find the maximum sum of all subarrays of size K <a href="#id-1-to-find-the-maximum-sum-of-all-subarrays-of-size-k" id="id-1-to-find-the-maximum-sum-of-all-subarrays-of-size-k"></a>
+
+Given an array of integers of size **‘n’,** Our aim is to calculate the maximum sum of **‘k’** consecutive elements in the array.
+
+<figure><img src="../.gitbook/assets/sliding-window-find-maximum.png" alt="" width="563"><figcaption><p>Slilding Window Technique</p></figcaption></figure>
+
+```c
+long maxSum(long arr[], int n, int k)
+{
+    // n must be greater
+    if (n <= k) {
+        cs1010_println_string("Invalid");
+        return -1;
+    }
+
+    // Compute sum of first window of size k
+    long max_sum = 0;
+    for (long i = 0; i < k; i++)
+        max_sum += arr[i];
+
+    // Compute sums of remaining windows by
+    // removing first element of previous
+    // window and adding last element of
+    // current window.
+    long window_sum = max_sum;
+    for (int i = k; i < n; i++) {
+        window_sum += arr[i] - arr[i - k];
+        max_sum = max(max_sum, window_sum);
+    }
+
+    return max_sum;
+}
+```
+
+The most important idea is to **remove the first element** and **add the last element of the current window.**
+
 ## Tips
 
 1. (**`char` and `long` difference**) Don't mix `char` and `long` in your code. For example, casting from `long` to `char` (e.g. `long` 9 to `char` 9), use `(char) 9 + '0'`. From `char` to `long` (e.g. `char 9` to `long 9`), use `'9'-'0'`
 2. (**`size_t` always bigger than 0**) To avoid the trouble that `size_t` cannot be negative in the `for` loop, we can convert them into `long` explicitly.
+3. (**Start and end of 1-D array in the function in recursion**) When writing recursion including 1-D Array, pay attention to the **inclusiveness** of the start and end in your function of recursion.
