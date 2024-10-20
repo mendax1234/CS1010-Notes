@@ -1,4 +1,4 @@
-# PE1 - Review
+# PE1 Review
 
 ## Important Concepts
 
@@ -96,7 +96,7 @@ long *array = calloc(n, sizeof(long));
 
 <details>
 
-<summary>When should we use <strong>dynamic-length array</strong> instead of <a data-mention href="pe1-review.md#fixed-length-array">#fixed-length-array</a>?</summary>
+<summary>When should we use <strong>dynamic-length array</strong> instead of <a data-mention href="./#fixed-length-array">#fixed-length-array</a>?</summary>
 
 That is when we don't know the length of our array before we run our program (e.g. we may depend on the user input to decide the length of our array)
 
@@ -150,7 +150,7 @@ for (long i = 0; i < 10; i += 1) {
 }
 ```
 
-<figure><img src="../.gitbook/assets/fixed-size-array-of-dynamic-array.png" alt="" width="563"><figcaption><p>A fixed size array of dynamically allocated memory</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/fixed-size-array-of-dynamic-array.png" alt="" width="563"><figcaption><p>A fixed size array of dynamically allocated memory</p></figcaption></figure>
 
 This is used when you already know the number of **rows** in your array before you run your program, but you don't know the number of **cols** before you run your program. So, we may use dynamic array to achieve this.
 
@@ -285,7 +285,7 @@ if (lines == NULL) {
 ```
 
 {% hint style="info" %}
-Using [#char-cs1010\_read\_word\_arraysize\_t-k](pe1-review.md#char-cs1010\_read\_word\_arraysize\_t-k "mention") and [#char-cs1010\_read\_line\_arraysize\_t-k](pe1-review.md#char-cs1010\_read\_line\_arraysize\_t-k "mention") can save us the trouble from dealing with the inner Null pointer check. **We only need to judge whether the pointer returned is NULL or not**. (Applies to all four I/O functions here)
+Using [#char-cs1010\_read\_word\_arraysize\_t-k](./#char-cs1010\_read\_word\_arraysize\_t-k "mention") and [#char-cs1010\_read\_line\_arraysize\_t-k](./#char-cs1010\_read\_line\_arraysize\_t-k "mention") can save us the trouble from dealing with the inner Null pointer check. **We only need to judge whether the pointer returned is NULL or not**. (Applies to all four I/O functions here)
 {% endhint %}
 
 ## Important Functions
@@ -294,10 +294,10 @@ Using [#char-cs1010\_read\_word\_arraysize\_t-k](pe1-review.md#char-cs1010\_read
 
 There are four methods provided by CS1010 I/O Library
 
-1. Read an **array of long**, use [#long-cs1010\_read\_long\_arraysize\_t-k](pe1-review.md#long-cs1010\_read\_long\_arraysize\_t-k "mention")
-2. Read an **array of double**, use [#double-cs1010\_read\_double\_arraysize\_t-k](pe1-review.md#double-cs1010\_read\_double\_arraysize\_t-k "mention")
-3. Read an **array of char (word)**, use [#char-cs1010\_read\_word](pe1-review.md#char-cs1010\_read\_word "mention")
-4. Read an **array of char (line)**, use [#char-cs1010\_read\_line](pe1-review.md#char-cs1010\_read\_line "mention")
+1. Read an **array of long**, use [#long-cs1010\_read\_long\_arraysize\_t-k](./#long-cs1010\_read\_long\_arraysize\_t-k "mention")
+2. Read an **array of double**, use [#double-cs1010\_read\_double\_arraysize\_t-k](./#double-cs1010\_read\_double\_arraysize\_t-k "mention")
+3. Read an **array of char (word)**, use [#char-cs1010\_read\_word](./#char-cs1010\_read\_word "mention")
+4. Read an **array of char (line)**, use [#char-cs1010\_read\_line](./#char-cs1010\_read\_line "mention")
 
 ### Multidimensional Array
 
@@ -313,7 +313,7 @@ void free_mem(size_t start, size_t end, char **tar)
 }
 ```
 
-Combine it with the [#dynamically-size-2d-array](pe1-review.md#dynamically-size-2d-array "mention"), we have
+Combine it with the [#dynamically-size-2d-array](./#dynamically-size-2d-array "mention"), we have
 
 ```c
 size_t n = cs1010_read_size_t(); 
@@ -332,7 +332,7 @@ for (size_t i = 0; i < n; i += 1) {
 }
 ```
 
-Another method is to use [#char-cs1010\_read\_word\_arraysize\_t-k](pe1-review.md#char-cs1010\_read\_word\_arraysize\_t-k "mention")
+Another method is to use [#char-cs1010\_read\_word\_arraysize\_t-k](./#char-cs1010\_read\_word\_arraysize\_t-k "mention")
 
 ```c
 size_t n = cs1010_read_size_t();
@@ -485,7 +485,7 @@ long find_pos(char *word, char *line)
 
 Given an array of integers of size **‘n’,** Our aim is to calculate the maximum sum of **‘k’** consecutive elements in the array.
 
-<figure><img src="../.gitbook/assets/sliding-window-find-maximum.png" alt="" width="563"><figcaption><p>Slilding Window Technique</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/sliding-window-find-maximum.png" alt="" width="563"><figcaption><p>Slilding Window Technique</p></figcaption></figure>
 
 ```c
 long maxSum(long arr[], int n, int k)
@@ -522,3 +522,4 @@ The most important idea is to **remove the first element** and **add the last el
 1. (**`char` and `long` difference**) Don't mix `char` and `long` in your code. For example, casting from `long` to `char` (e.g. `long` 9 to `char` 9), use `(char) 9 + '0'`. From `char` to `long` (e.g. `char 9` to `long 9`), use `'9'-'0'`
 2. (**`size_t` always bigger than 0**) To avoid the trouble that `size_t` cannot be negative in the `for` loop, we can convert them into `long` explicitly.
 3. (**Start and end of 1-D array in the function in recursion**) When writing recursion including 1-D Array, pay attention to the **inclusiveness** of the start and end in your function of recursion.
+4. (**Frequency Table of a number**) The idea is treating every digit of a number as the frequency table's index and iterate through each digit to count its frequency.
