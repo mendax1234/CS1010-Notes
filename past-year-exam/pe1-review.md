@@ -380,6 +380,12 @@ if (matrix == NULL) {
     free(matrix);
     return 1;
 }
+// free memory used
+for (size_t i = 0; i < nrows; i += 1)
+{
+    free(matrix[i]);
+}
+free(matrix);
 ```
 
 ### String
@@ -424,6 +430,10 @@ void traverse_backward(char *num1, size_t len1)
     }
 }
 ```
+
+{% hint style="info" %}
+Cast the string index to be `long`! It can save lots of trouble!
+{% endhint %}
 
 #### Check the existence of a word in a line
 
