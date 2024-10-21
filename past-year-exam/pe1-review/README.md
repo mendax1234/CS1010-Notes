@@ -20,7 +20,7 @@ long list[10];
 list = {1, 2, 3, 1, 5, 10, 10, 4, 5, 3, };  // error
 ```
 
-#### Passing Array as Parameter to Functions
+#### Passing Fixed-Length Array as Parameter to Functions
 
 There are **two** ways to pass the array as a parameters to functions.
 
@@ -102,6 +102,17 @@ That is when we don't know the length of our array before we run our program (e.
 
 </details>
 
+#### Passing a Dynamic-Length Array as Parameter to Functions
+
+The most common way we use is to pass the **length** of the array and the its address
+
+```c
+void foo(long len, long *list)
+{
+    :
+}
+```
+
 ### String
 
 #### char
@@ -130,17 +141,28 @@ However, using the Line 2 version, the string is called a **String Literal**. An
 Note that Line 1 stores the string on the **stack** while Line 2 stores the string in a **read-only memory.** However, the most common way is to store strings on the **heap** so that we can modify it easily.
 {% endhint %}
 
+To create a string on the **heap**, we can use the function provided by CS1010 I/O library.
+
+```c
+char *word = cs1010_read_word(); // read a word
+char *line = cs1010_read_line(); // read a line
+```
+
 ### Multidimensional Array
 
 Based on our requirements, we may choose what kind of array we want to declare in our code.
 
 #### A Fixed size 2-D Array
 
+Suppose before we run our program, we already know the dimension of our matrix (num of **rows** and num of **cols**). We can use the following method to declare a fixed-size 2-D array.
+
 ```c
 long matrix[10][20];
 ```
 
 #### A Fixed-Size Array of Dynamically Allocated Array <a href="#a-fixed-size-array-of-dynamically-allocated-array" id="a-fixed-size-array-of-dynamically-allocated-array"></a>
+
+This is used when we already know the number of **rows** in your array before we run our program, but we don't know the number of **cols** before we run our program. So, we may use dynamic array for each row.
 
 ```c
 double *buckets[10];
@@ -152,11 +174,9 @@ for (long i = 0; i < 10; i += 1) {
 
 <figure><img src="../../.gitbook/assets/fixed-size-array-of-dynamic-array.png" alt="" width="563"><figcaption><p>A fixed size array of dynamically allocated memory</p></figcaption></figure>
 
-This is used when you already know the number of **rows** in your array before you run your program, but you don't know the number of **cols** before you run your program. So, we may use dynamic array to achieve this.
-
 #### Dynamically Size 2D Array <a href="#dynamically-size-2d-array" id="dynamically-size-2d-array"></a>
 
-Now, suppose we know **neither** the number of **rows** and the number of **cols** before we run our program. We should use the following convention to declare our dynamically size 2D Array
+Now, suppose we know **neither** the number of **rows** and the number of **cols** before we run our program. We should use the following convention to declare our dynamically size 2D array.
 
 ```c
 double **canvas;
@@ -186,6 +206,7 @@ Returns a `char *` pointing to the next **white-space-separated** string from th
 char* word = cs1010_read_word();
 if (word == NULL) {
   // Deal with error
+  // No need to free since allocation unsuccessful
 } else {
   // Do something with word
   :
@@ -202,6 +223,7 @@ Returns a `char *` pointing to the next **new-line-separated** string from the s
 char* line = cs1010_read_line();
 if (line == NULL) {
   // Deal with error
+  // No need to free since allocation unsuccessful
 } else {
   // Done something with line
   :
@@ -349,12 +371,12 @@ if (social == NULL)
 long **read_matrix(size_t nrows, size_t ncols)
 {
     // create
-    long **m = malloc(nrows * sizeof(long *));
+    long **m = calloc(nrows, sizeof(long *));
     if (m == NULL) {
         return NULL;
     }
     for (size_t i = 0; i < nrows; i += 1) {
-        m[i] = malloc(ncols * sizeof(long));
+        m[i] = calloc(ncols, sizeof(long));
         if (m[i] == NULL) {
             free_mem(0, i, m);
             return NULL;
@@ -380,7 +402,7 @@ if (matrix == NULL) {
     free(matrix);
     return 1;
 }
-// free memory used
+// free the used memory
 for (size_t i = 0; i < nrows; i += 1)
 {
     free(matrix[i]);
@@ -432,7 +454,7 @@ void traverse_backward(char *num1, size_t len1)
 ```
 
 {% hint style="info" %}
-Cast the string index to be `long`! It can save lots of trouble!
+Cast the string index `i` to be `long`! It can save lots of trouble!
 {% endhint %}
 
 #### Check the existence of a word in a line
@@ -517,9 +539,113 @@ long maxSum(long arr[], int n, int k)
 
 The most important idea is to **remove the first element** and **add the last element of the current window.**
 
+## Classic Problem
+
+### [Ex5 Q6 Social](https://nus-cs1010.github.io/2425-s1/exercises/ex05.html#question-6-social)
+
+Write a program `social`, that reads from standard input two positive integers n and k, followed by n lines of strings consisting of '1' or '0' representing the social network of degree 1 of these n people. Print, to the standard output, the social network of degree k formed by friendship chains of up to k hops.
+
+```c
+#include "cs1010.h"
+
+#define FRIEND '1'
+#define STRANGER '0'
+
+void free_mem(size_t start, size_t end, char **tar)
+{
+  for (size_t i = start; i < end; i += 1) {
+    free(tar[i]);
+  }
+  free(tar);
+}
+
+void print_result(size_t n, char **social)
+{
+  for (size_t i = 0; i < n; i += 1) {
+    cs1010_println_string(social[i]);
+  }
+}
+
+bool has_contact_trivial(size_t id1, size_t id2, long deg, char **social)
+{
+  if (id1 > id2) {
+    return social[id1][id2] == (char)deg + '0';
+  }
+  return social[id2][id1] == (char)deg + '0';
+}
+
+bool has_contact(size_t id1, size_t id2, long deg, size_t n, char **social)
+{
+  if (deg == 1) {
+    return has_contact_trivial(id1, id2, 1, social);
+  }
+  for (size_t k = 0; k < n; k += 1) {
+    if (k != id1 && k != id2 && has_contact_trivial(id1, k, deg - 1, social) &&
+        has_contact_trivial(k, id2, 1, social)) {
+      return true;
+    }
+  }
+  return false;
+}
+
+void build_social(size_t n, long deg, char **social)
+{
+  if (deg == 1) {
+    return;
+  }
+  build_social(n, deg - 1, social);
+  for (size_t i = 0; i < n; i += 1) {
+    for (size_t j = i + 1; j < n; j += 1) {
+      if (social[j][i] == '0' && has_contact(i, j, deg, n, social)) {
+        social[j][i] = (char)deg + '0';
+      }
+    }
+  }
+}
+
+void temp_to_real(size_t n, char **social)
+{
+  for (size_t i = 0; i < n; i += 1) {
+    for (size_t j = 0; j < i; j += 1) {
+      if (social[i][j] != '0' && social[i][j] != '1') {
+        social[i][j] = FRIEND;
+      }
+    }
+  }
+}
+
+int main()
+{
+  size_t n = cs1010_read_size_t();
+  long deg = cs1010_read_long();
+
+  char **social = calloc(n, sizeof(char *));
+  if (social == NULL) {
+    return 1;
+  }
+  for (size_t i = 0; i < n; i += 1) {
+    social[i] = cs1010_read_word();
+    if (social[i] == NULL) {
+      free_mem(0, i, social);
+      return 1;
+    }
+  }
+
+  build_social(n, deg, social);
+  temp_to_real(n, social);
+  print_result(n, social);
+
+  for (size_t i = 0; i < n; i += 1) {
+    free(social[i]);
+  }
+  free(social);
+}
+```
+
 ## Tips
 
 1. (**`char` and `long` difference**) Don't mix `char` and `long` in your code. For example, casting from `long` to `char` (e.g. `long` 9 to `char` 9), use `(char) 9 + '0'`. From `char` to `long` (e.g. `char 9` to `long 9`), use `'9'-'0'`
 2. (**`size_t` always bigger than 0**) To avoid the trouble that `size_t` cannot be negative in the `for` loop, we can convert them into `long` explicitly.
 3. (**Start and end of 1-D array in the function in recursion**) When writing recursion including 1-D Array, pay attention to the **inclusiveness** of the start and end in your function of recursion.
-4. (**Frequency Table of a number**) The idea is treating every digit of a number as the frequency table's index and iterate through each digit to count its frequency.
+4. (**Frequency Table of a number**) The idea is to treat every digit of a number as the frequency table's index and iterate through each digit to count its frequency.
+5. (**2-D Array in solving hard problems**) Make wise use of the 2-D Array, while each element's index (`i` and `j`) can represent some "relationship" between the `i` and `j`. This "relationship" is stored as the **value** of this element.
