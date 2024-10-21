@@ -12,7 +12,6 @@
     * [Diagnostic Quiz](lec-tut-lab-exes/lecture/lec-08-multi-d-array-efficiency/diagnostic-quiz.md)
   * [Lec 09 - Searching and Sorting](lec-tut-lab-exes/lecture/lec-09-searching-and-sorting/README.md)
     * [Diagnostic Quiz](lec-tut-lab-exes/lecture/lec-09-searching-and-sorting/diagnostic-quiz.md)
-  * [Page](lec-tut-lab-exes/lecture/page.md)
 * [Tutorial](lec-tut-lab-exes/tutorial/README.md)
   * [Tut 01](lec-tut-lab-exes/tutorial/tut-01.md)
   * [Tut 02](lec-tut-lab-exes/tutorial/tut-02.md)
