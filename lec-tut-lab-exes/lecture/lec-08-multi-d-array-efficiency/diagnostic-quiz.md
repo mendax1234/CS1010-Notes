@@ -2,7 +2,7 @@
 
 ## Problems
 
-## 1. Define a 2-D Array
+### 1. Define a 2-D Array
 
 If we define a 2-D array on the **stack**. It will use a contiguous section of memory to store. For example
 
