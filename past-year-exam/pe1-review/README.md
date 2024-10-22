@@ -473,7 +473,7 @@ bool word_match(char *word, char *line)
 }
 ```
 
-#### Find the position of the first occurrance existence of a word
+#### Find the position of the first occurrance of a word
 
 In this code, `pos` stores the first occurrance of a word in the line, if DNE, then it is -1. `cur_pos` stores the current position of `char` we are about to match in the line.
 
