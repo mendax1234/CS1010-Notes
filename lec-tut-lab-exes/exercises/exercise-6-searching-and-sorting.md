@@ -9,3 +9,11 @@
 ### 2. Valley
 
 > An awesome variant question of Binary Search
+
+### 3. Inversion
+
+> Another generative problem. Require a bit of Math also. Use the idea of "bottom-up"
+
+### 4. Sort
+
+> A variant of counting sort.
