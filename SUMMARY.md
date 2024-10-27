@@ -47,6 +47,8 @@
   * [Midterm (AY22/23)](past-year-exam/midterm-paper/midterm-ay22-23.md)
 * [PE1 Review](past-year-exam/pe1-review/README.md)
   * [PE1 (AY23/24)](past-year-exam/pe1-review/pe1-ay23-24.md)
+* [PE2 Review](past-year-exam/pe2-review/README.md)
+  * [PE2 (AY18/19)](past-year-exam/pe2-review/pe2-ay18-19.md)
 
 ## Toolbox
 
