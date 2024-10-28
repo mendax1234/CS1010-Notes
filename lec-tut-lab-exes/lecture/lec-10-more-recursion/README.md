@@ -97,9 +97,9 @@ Why is `swap()` so awesome? Wait for lecture slides to be uploaded
 
 ### Tips
 
-1. The Permutation Problem gives us a method on how to do recursion in a tree-like graph below (traverse to the deepest node then return back[^1]), this idea will be pretty important in the following [#n-queens](lec-10-more-recursion.md#n-queens "mention") problem below also.
+1. The Permutation Problem gives us a method on how to do recursion in a tree-like graph below (traverse to the deepest node then return back[^1]), this idea will be pretty important in the following [#n-queens](./#n-queens "mention") problem below also.
 
-<figure><img src="../../.gitbook/assets/lec10-permutation-1.png" alt=""><figcaption><p>Permutation</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/lec10-permutation-1.png" alt=""><figcaption><p>Permutation</p></figcaption></figure>
 
 ## N-Queens
 
@@ -115,7 +115,7 @@ First, let's clarify how we gonna represent the "board" of our N-Queens. Instead
 The advantage of using this representation is that:
 
 1. we won't care about the **row and column constraint** anymore in solving, we only need to care about the **diagonal constraint;**
-2. The problem becomes very similar to the [#permutations](lec-10-more-recursion.md#permutations "mention") problem we have discussed above.
+2. The problem becomes very similar to the [#permutations](./#permutations "mention") problem we have discussed above.
 
 Before the discussion, let's write some helper function to help us check the **diganol constraint**
 
@@ -177,7 +177,7 @@ bool threaten_each_other_diagonally(char queens[], size_t last_row) {
 
 Use the idea of permutations, we can find all the possible permutations (first) and check whether they are valid or not (after).
 
-<figure><img src="../../.gitbook/assets/lec10-nqueens-1.png" alt=""><figcaption><p>N-Queens Version 1</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/lec10-nqueens-1.png" alt=""><figcaption><p>N-Queens Version 1</p></figcaption></figure>
 
 We will use the helper function `threaten_each_other_diagonally(char queens[], size_t last_row)`
 
