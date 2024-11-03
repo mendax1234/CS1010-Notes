@@ -32,6 +32,7 @@
   * [Exercise 3 - Fixed-Length Arrays](lec-tut-lab-exes/exercises/exercise-3-fixed-length-arrays.md)
   * [Exercise 4 - Dynamic Arrays and Strings](lec-tut-lab-exes/exercises/exercise-4-dynamic-arrays-and-strings.md)
   * [Exercise 6 - Searching and Sorting](lec-tut-lab-exes/exercises/exercise-6-searching-and-sorting.md)
+  * [Exercise 7 - More Recursion](lec-tut-lab-exes/exercises/exercise-7-more-recursion.md)
 
 ## Past Year Exam
 
