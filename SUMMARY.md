@@ -14,6 +14,8 @@
     * [Diagnostic Quiz](lec-tut-lab-exes/lecture/lec-09-searching-and-sorting/diagnostic-quiz.md)
   * [Lec 10 - More Recursion](lec-tut-lab-exes/lecture/lec-10-more-recursion/README.md)
     * [Diagnostic Quiz](lec-tut-lab-exes/lecture/lec-10-more-recursion/diagnostic-quiz.md)
+  * [Lec 11 - Strcut & Standard I/O](lec-tut-lab-exes/lecture/lec-11-strcut-and-standard-i-o/README.md)
+    * [Diagnostic Quiz](lec-tut-lab-exes/lecture/lec-11-strcut-and-standard-i-o/diagnostic-quiz.md)
 * [Tutorial](lec-tut-lab-exes/tutorial/README.md)
   * [Tut 01](lec-tut-lab-exes/tutorial/tut-01.md)
   * [Tut 02](lec-tut-lab-exes/tutorial/tut-02.md)
