@@ -207,7 +207,9 @@ void nqueens(char queens[], size_t n, size_t row) {
 }
 </code></pre>
 
-The highlighted code (Line 13) does the diagonal constraint check **after we have found a permutation**. However, this is actually very time consuming and will do lots of useless work.
+Use wishful thinking to understand, in this problem, we need to find **all the solutions**, that is we will stop after we brute-force all the possible cases, so there is no restriction for our function type and it should be **void**.
+
+The highlighted code (Line 13) does the diagonal constraint check **after we have reached the last step - to put the last queen on our board**. However, this is actually very time consuming and will do lots of useless work.
 
 ### Find one solution
 
@@ -244,10 +246,12 @@ bool nqueens(char queens[], size_t n, size_t row) {
 }
 </code></pre>
 
-First, change the base case to "once we have found a valid solution, return `true`". Then change the recursion part to a `boolean` condition, if its value is `true`, means that we have found a valid solution, then we return `true` to get out of the function call.
+Use wishful thinking to understand, what this function does is to find one solution/judge whether there is a solution or not, so obviously the type of the function should be **boolean**.
+
+Line 22 is what we do to **modify/try our current solution**, and immediately after that, Line 23 is to check whether there is a solution to our smaller problem or not. If there is, then we rerturn **TRUE**, which means we have found a solution to our problem. And immediately after that, we return **TRUE** from our current function call, which means we have found a solution! (Use the call-stack diagram to understand that)
 
 {% hint style="info" %}
-The first two return statements indicate whether the solution is valid or not. While the last two return statements will control whether we will exit the function call or not.
+All the **return statements** indicate whether we have found a solution or not (including both trivial cases and the recursive/smaller problem cases).
 {% endhint %}
 
 However, this is still a bit time consuming. (Wait for lecture slides to come up)
