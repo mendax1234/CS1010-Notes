@@ -163,3 +163,8 @@ void replace(char *word, char *search_for, char *replace_with)
 }
 ```
 {% endcode %}
+
+## Tips
+
+1. When doing string traversal, it is strongly recommended to use `strlen()` to get the length of the string, and then use a **for loop** to traverse through thes string, with the loop variable `i` indicating the current position of the character we have traversed!
+
