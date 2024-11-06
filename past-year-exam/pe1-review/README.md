@@ -331,7 +331,7 @@ void free_mem(size_t start, size_t end, char **tar)
     for (size_t i = start; i < end; i += 1) {
         free(tar[i]);
     }
-    free(tar)
+    free(tar);
 }
 ```
 

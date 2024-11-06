@@ -54,6 +54,7 @@
   * [PE1 (AY23/24)](past-year-exam/pe1-review/pe1-ay23-24.md)
 * [PE2 Review](past-year-exam/pe2-review/README.md)
   * [PE2 (AY18/19)](past-year-exam/pe2-review/pe2-ay18-19.md)
+  * [PE2 (AY20/21)](past-year-exam/pe2-review/pe2-ay20-21.md)
 
 ## Toolbox
 
