@@ -30,6 +30,7 @@
   * [Lab 06 - Memory Errors](lec-tut-lab-exes/lab/lab-06-memory-errors.md)
   * [Lab 07 - Compiling with Clang](lec-tut-lab-exes/lab/lab-07-compiling-with-clang.md)
   * [Lab 08 - C Preprocessor](lec-tut-lab-exes/lab/lab-08-c-preprocessor.md)
+  * [Lab 09 - Backtracking](lec-tut-lab-exes/lab/lab-09-backtracking.md)
 * [Exercises](lec-tut-lab-exes/exercises/README.md)
   * [Exercise 3 - Fixed-Length Arrays](lec-tut-lab-exes/exercises/exercise-3-fixed-length-arrays.md)
   * [Exercise 4 - Dynamic Arrays and Strings](lec-tut-lab-exes/exercises/exercise-4-dynamic-arrays-and-strings.md)
