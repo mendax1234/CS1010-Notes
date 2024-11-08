@@ -56,6 +56,7 @@
   * [PE2 (AY18/19)](past-year-exam/pe2-review/pe2-ay18-19.md)
   * [PE2 (AY20/21)](past-year-exam/pe2-review/pe2-ay20-21.md)
   * [PE2 (AY21/22)](past-year-exam/pe2-review/pe2-ay21-22.md)
+  * [PE2 (AY22/23)](past-year-exam/pe2-review/pe2-ay22-23.md)
 
 ## Current Year Exam
 
