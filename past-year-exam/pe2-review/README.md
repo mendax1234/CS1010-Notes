@@ -167,4 +167,4 @@ void replace(char *word, char *search_for, char *replace_with)
 ## Tips
 
 1. When doing string traversal, it is strongly recommended to use `strlen()` to get the length of the string, and then use a **for loop** to traverse through thes string, with the loop variable `i` indicating the current position of the character we have traversed!
-
+2. When doing Backtracking/Recursion problems, always think about the three statements, they will help you form the solution: a)**Current Stage,** b)**Terminating Condition,** c)**State Transitions**
