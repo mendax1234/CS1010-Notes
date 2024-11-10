@@ -21,6 +21,7 @@
   * [Tut 02](lec-tut-lab-exes/tutorial/tut-02.md)
   * [Tut 03](lec-tut-lab-exes/tutorial/tut-03.md)
   * [Tut 04](lec-tut-lab-exes/tutorial/tut-04.md)
+  * [Tut 08 - Searching and Sorting](lec-tut-lab-exes/tutorial/tut-08-searching-and-sorting.md)
 * [Lab](lec-tut-lab-exes/lab/README.md)
   * [Lab 01 - Unix/Vim Setup](lec-tut-lab-exes/lab/lab-01.md)
   * [Lab 02 - Debugging](lec-tut-lab-exes/lab/lab-02.md)
