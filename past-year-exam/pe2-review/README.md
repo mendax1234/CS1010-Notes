@@ -657,15 +657,22 @@ void nqueens(char queens[], size_t n, size_t row) {
 
 1. When doing string traversal, it is strongly recommended to use `strlen()` to get the length of the string, and then use a **for loop** to traverse through thes string, with the loop variable `i` indicating the current position of the character we have traversed!
 2. Refer back to [Lab 09 - Backtracking](https://wenbo-notes.gitbook.io/cs1010-notes/lec-tut-lab-exes/lab/lab-09-backtracking) when doing the backtracking problems! Usually, an easier way to help you understand is to **draw a "tree"**.
-3. When doing Backtracking/Recursion problems, always think about the three statements, they will help you form the solution: a)**Current Stage,** b)**Terminating Condition,** c)**State Transitions**
-4. Somtimes changing the **loop condition** will change the obvious time complexity, pay attention to the "hidden" time complexity and sometimes this kind of change can be utilised to make your code more effificient. See [#id-2.-sun](pe2-ay20-21.md#id-2.-sun "mention")
-5. When you want to improve the complexity of **searching/sorting** problems, try thinking about how to **narrow your "searching area"**. This will be very useful!
-6. The `strlen()` from C standard lib `<string.h>` will return **the number of characters in a string** (excluding the terminating `'\0'`).
-7. Whenever you see the Time complexity is $$O(logN)O(logN)$$, try to think of **binary search**.
-8.  When implementing the search algorithm, always keep in mind:
+3. The [#id-3.-group](pe2-ay22-23.md#id-3.-group "mention") provides an awesome idea to use array to store the previous states when doing backtracking!
+4. When writing recursion in 2-D array, always think about how would you **not** enter an "infinite loop". This is usually down in your **condition to enter the recursion**. Some common methods are:
+   1. mark the attendance of the "cell" you have updated. (a.k.a build an `unvisited_array`)
+   2. there is some initial "constant" that you can compare to
+5. When doing Backtracking/Recursion problems, always think about the three statements, they will help you form the solution: a)**Current Stage,** b)**Terminating Condition,** c)**State Transitions**. Anyway, the whole idea is to **think about how to do the backtracking! (State Transitions)**. This is usually done by:
+   1. either redo the step you have done
+   2. write a new value to the step you have done
+6. Somtimes changing the **loop condition** will change the obvious time complexity, pay attention to the "hidden" time complexity and sometimes this kind of change can be utilised to make your code more effificient. See [#id-2.-sun](pe2-ay20-21.md#id-2.-sun "mention")
+7. When you want to improve the complexity of **searching/sorting** problems,
+   1. try thinking about how to **narrow your "searching area"**. This will be very useful!
+   2. think about find the pattern, this will affect your algorithm greatly. See [exercise-6-searching-and-sorting.md](../../lec-tut-lab-exes/exercises/exercise-6-searching-and-sorting.md "mention")
+8. The `strlen()` from C standard lib `<string.h>` will return **the number of characters in a string** (excluding the terminating `'\0'`).
+9. Whenever you see the Time complexity is $$O(logN)O(logN)$$, try to think of **binary search**.
+10. When implementing the search algorithm, always keep in mind:
 
     1. How to define our search range (The use of index is inclusive or not)
     2. When to stop our searching (How to decide the search is successful or not)
 
     In this binary search algorithm, our search range is all the number bewteen `list[i]` and `list[j]` (both inclusive). And there are two cases we should stop our searching: 1) when there is no element in our search range, 2) when `list[mid]` is what we want to find.
-9. The [#id-3.-group](pe2-ay22-23.md#id-3.-group "mention") provides an awesome idea to use array to store the previous states when doing backtracking!
