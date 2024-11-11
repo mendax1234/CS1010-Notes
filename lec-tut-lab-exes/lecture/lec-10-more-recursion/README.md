@@ -248,7 +248,7 @@ bool nqueens(char queens[], size_t n, size_t row) {
 
 Use wishful thinking to understand, what this function does is to find one solution/judge whether there is a solution or not, so obviously the type of the function should be **boolean**.
 
-Line 22 is what we do to **modify/try our current solution**, and immediately after that, Line 23 is to check whether there is a solution to our smaller problem or not. If there is, then we rerturn **TRUE**, which means we have found a solution to our problem. And immediately after that, we return **TRUE** from our current function call, which means we have found a solution! (Use the call-stack diagram to understand that)
+Line 22 is to **modify/try our current solution**, and immediately after that, Line 23 is to check whether there is a solution to our smaller problem or not. If there is, then we rerturn **TRUE**, which means we have found a solution to our problem. And immediately after that, we return **TRUE** from our current function call, which means we have found a solution! (Use the call-stack diagram to understand that)
 
 {% hint style="info" %}
 All the **return statements** indicate whether we have found a solution or not (including both trivial cases and the recursive/smaller problem cases).

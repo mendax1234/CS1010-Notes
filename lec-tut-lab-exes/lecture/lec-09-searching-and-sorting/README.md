@@ -42,7 +42,7 @@ long search(const long list[], long i, long j, long q) {
 ```
 {% endcode %}
 
-The main idea in this algorithm is that this algorithm repeatedly **cut the range of values to search by half**.
+The main idea in this algorithm is that it repeatedly **cuts the range of values to search by half**.
 
 {% hint style="info" %}
 When implementing the search algorithm, always keep in mind:
