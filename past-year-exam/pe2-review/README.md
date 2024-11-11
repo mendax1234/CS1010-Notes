@@ -164,6 +164,64 @@ void replace(char *word, char *search_for, char *replace_with)
 ```
 {% endcode %}
 
+### Binary Search
+
+#### Binary Search in a Rotated Sorted List
+
+> Appeared in [#id-3.-rotate](pe2-ay18-19.md#id-3.-rotate "mention")
+
+{% code lineNumbers="true" %}
+```c
+/* 
+ * @param a   the rotated sorted list
+ * @param i   start position in the list (inclusive)
+ * @param j   end position in the list (inclusive)
+ * @param q   the number to search for
+ * @param len the length of the list
+ *
+ * @output the position of q in the rotated sorted list
+*/
+long search(long *a, long i, long j, long q, size_t len)
+{
+  if (i > j)
+  {
+    return -1;
+  }
+  // Get how many bits have been right rotated
+  long rotate = rotate_pos(a, len);
+  long mid = (i + j) / 2;
+  // Calculate the updated index
+  long mid_rotated_pos = within_range(mid, rotate, len);
+  if (a[mid_rotated_pos] == q)
+  {
+    return mid_rotated_pos;
+  }
+  if (a[mid_rotated_pos] > q)
+  {
+    return search(a, i, mid - 1, q, len);
+  }
+  return search(a, mid + 1, j, q, len);
+}
+```
+{% endcode %}
+
+Where, `within_range()` is implemented as follows;
+
+{% code lineNumbers="true" %}
+```c
+long within_range(long index, long rotate, size_t len)
+{
+  if ((index + rotate) >= (long)len)
+  {
+    return index + rotate - (long)len;
+  }
+  return index + rotate;
+}
+```
+{% endcode %}
+
+
+
 ## Tips
 
 1. When doing string traversal, it is strongly recommended to use `strlen()` to get the length of the string, and then use a **for loop** to traverse through thes string, with the loop variable `i` indicating the current position of the character we have traversed!
