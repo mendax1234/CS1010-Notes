@@ -618,19 +618,25 @@ void nqueens(char queens[], size_t n, size_t row) {
  * @param[in] row     The last row where the queens positions 
  *                    have been fixed.
  */
-void nqueens(char queens[], size_t n, size_t row) {
+bool nqueens(char queens[], long n, long row) {
   if (row == n - 1) {
-    if (!threaten_each_other_diagonally(queens, row)) {
+    if (!threaten_each_other_diagonally(queens, n - 1)) {
       cs1010_println_string(queens);
+      return true;
     }
-    return;
+    return false;
   }
 
-  for (size_t i = row; i < n; i++) {
+  for (long i = row; i < n; i++) {
     swap(queens, row, i);
-    nqueens(queens, n, row + 1);
+    if (!threaten_each_other_diagonally(queens, row)) {
+      if (nqueens(queens, n, row + 1)) {
+        return true;
+      }
+    }
     swap(queens, row, i);
   }
+  return false;
 }
 ```
 {% endcode %}
