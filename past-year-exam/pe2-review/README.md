@@ -675,10 +675,10 @@ bool nqueens(char queens[], long n, long row) {
    1. try thinking about how to **narrow your "searching area"**. This will be very useful!
    2. think about find the pattern, this will affect your algorithm greatly. See [exercise-6-searching-and-sorting.md](../../lec-tut-lab-exes/exercises/exercise-6-searching-and-sorting.md "mention")
 8. The `strlen()` from C standard lib `<string.h>` will return **the number of characters in a string** (excluding the terminating `'\0'`).
-9. Whenever you see the Time complexity is $$O(logN)O(logN)$$, try to think of **binary search**.
+9. Whenever you see the Time complexity is $$O(logN)$$, try to think of **binary search**.
 10. When implementing the search algorithm, always keep in mind:
 
     1. How to define our search range (The use of index is inclusive or not)
     2. When to stop our searching (How to decide the search is successful or not)
 
-    In this binary search algorithm, our search range is all the number bewteen `list[i]` and `list[j]` (both inclusive). And there are two cases we should stop our searching: 1) when there is no element in our search range, 2) when `list[mid]` is what we want to find.
+    In the classic [#binary-search](./#binary-search "mention"), our search range is all the number bewteen `list[i]` and `list[j]` (both inclusive). And there are two cases we should stop our searching: 1) when there is no element in our search range, 2) when `list[mid]` is what we want to find.
