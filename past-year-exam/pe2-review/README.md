@@ -338,7 +338,7 @@ long within_range(long index, long rotate, size_t len)
 /*
  * @param histogram The input board
  * @param start     The start searching position (inclusive)
- * @param end       The end searching position (inclusive)
+ * @param end       The end searching position (exclusive)
  * @param row       The specific row to search for
  *
  * @output the number of '#' in the row
