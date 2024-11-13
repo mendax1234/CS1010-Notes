@@ -64,6 +64,7 @@
 
 * [PE0 (AY24/25)](current-year-exam/pe0-ay24-25.md)
 * [PE1 (AY24/25)](current-year-exam/pe1-ay24-25.md)
+* [PE2 (AY24/25)](current-year-exam/pe2-ay24-25.md)
 
 ## Toolbox
 
