@@ -213,7 +213,7 @@ Segmentation fault
 Well, now we have a _buffer overflow_. You might get `Segmentation fault` on a Linux system, any other kind of crash, maybe even a "correctly" working program, because, once again, the program has **undefined behavior**.
 
 {% hint style="warning" %}
-#### Buffer overflows in `C` <a href="#buffer-overflows-in-c" id="buffer-overflows-in-c"></a>
+Buffer overflows in `C`
 
 A _buffer overflow_ is a specific kind of _undefined behavior_ resulting from a program that tries to write more data to an (array) variable than this variable can hold. Although this is _undefined_, in practice it will result in overwriting some _other_ data (that happens to be placed after the overflowed buffer in memory) and this can easily crash the program.
 
