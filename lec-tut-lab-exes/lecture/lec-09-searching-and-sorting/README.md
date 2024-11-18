@@ -103,7 +103,7 @@ void counting_sort(size_t len, const long in[], long out[])
 
 > The time complexity is $$O(N^2)$$
 
-The soul of this algorithm is to 1) partition the list into two parts, an unsorted part followed by a sorted part, 2) repeated **selects the maximum element from the unsorted part** and **move it to the front of the sorted part**. (For increasing sort).
+The soul of this algorithm is to 1) partition the list into two parts, an unsorted part followed by a sorted part, 2) repeatedly **selects the maximum element from the unsorted part** and **move it to the front of the sorted part**. (For increasing sort).
 
 {% hint style="info" %}
 Otherwise, for decreasing sort, the idea will be to find the **smallest unsorted element** and add it to the **end of the sorted list.**
@@ -155,7 +155,7 @@ void selection_sort(size_t n, long list[])
 
 > The time complexity is $$O(N^2)$$
 
-The idea is that this algorithm sorts the largest number to the end until the beginning by a series of **bubble pass**. In each pass, we look for all possible adjacent pairs of items. Any adjacent pair that is out of order is swapped so that they are in order. So, after each pass, we will move the largest number to its correct position and in the next pass, we will exclude it.
+The idea is that this algorithm sorts the largest number to the end until the beginning by a series of **bubble pass**. In each pass, we look for all possible adjacent pairs of items. Any adjacent pair that is out of order is swapped so that they are in order. So, after each pass, we will **move the largest number to its correct position** and in the next pass, we will exclude it.
 
 {% code lineNumbers="true" %}
 ```c

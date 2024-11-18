@@ -85,7 +85,7 @@ module cs1010e;
 
 The specifier controls the interpretation of the argument. `s` for string, `c` for character, `d` for integer (base 10), `f` for floating-point number, `p` for pointer (base 16). We can additionally prepend this with _length modifier_. `ld` for `long` integer, `lld` for `long long`, and `lf` for `double`.
 
-To format the output, we can prepend it with a number to indicate its _field width_, or minimum space used when printing. E.g., `%3d` will pad the number printed with space if the number printed is less than 3 digits. Adding a _flag_ 0 in front, `%03d`, will pad the number with 0s if the number printed is less than 3 digits. For floating-point numbers, we can additionally control the _precision_, or the number of digits printed after the decimal point. `%3.4lf` will print a double to four decimal points. The first 3 indicates that if the whole floating point number (integer + floating parts + 1 for the `.`) is less than length 3, white spaces will be padded at front. Otherwise, nothing will be padded.
+To format the output, we can prepend it with a number to indicate its _field width_, or minimum space used when printing. E.g., `%3d` will pad the number printed with space if the number printed is less than 3 digits. Adding a _flag_ 0 in front, `%03d`, will pad the number with 0s if the number printed is less than 3 digits. For floating-point numbers, we can additionally control the _precision_, or the number of digits printed after the decimal point. e.g. `%3.4lf` will print a double to four decimal points. The first 3 indicates that if the whole floating point number (integer + floating parts + 1 for the `.`) is less than length 3, white spaces will be padded at front. Otherwise, nothing will be padded.
 
 Some examples:
 
@@ -223,7 +223,7 @@ One particularly dangerous result of a buffer overflow is overwriting the _retur
 So, here's the next rule:
 
 {% hint style="info" %}
-Rule 2: **:** `scanf()` can be _dangerous_ when used carelessly. Always use **field widths** with conversions that parse to a string (like `%s`).
+Rule 2: `scanf()` can be _dangerous_ when used carelessly. Always use **field widths** with conversions that parse to a string (like `%s`).
 {% endhint %}
 
 The field width is a number preceeding the conversion specifier. It causes `scanf()` to consider a maximum number of characters from the input when parsing for this conversion. Let's demonstrate it in a fixed program:

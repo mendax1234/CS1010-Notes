@@ -53,7 +53,7 @@ Suppose the problem we are facing now is to find all the permutations of a strin
 
 The base case is trivial, it is when we have one character left (same as we have reached the end of the string), just print this character.
 
-The recursive case, however, is not that trivial. Use wishful thinking, suppose that given a string of length `k`, we already know the all the permutations of its substring with length `k-1` (excluding itself). How can we find all the permutations of the string with length `k`? Since we have `k` options for the leading characters, so we need to iterate through these `k` options and find all their corresponding `k-1` permutations. And here come the awesome idea of `swap()`.
+The recursive case, however, is not that trivial. Use wishful thinking, suppose that given a string of length `k`, we already know the all the permutations of its substring with length `k-1` (excluding itself). How can we find all the permutations of the string with length `k`? Since we have `k` options for the leading characters, so we need to iterate through these `k` options and find all their corresponding `k-1` permutations. And here comes the awesome idea of `swap()`.
 
 <pre class="language-c" data-title="Permutations.c" data-line-numbers><code class="lang-c">/**
  * Fix a[0]..a[curr - 1] but permute characters a[curr]..a[len - 1]
@@ -209,7 +209,7 @@ void nqueens(char queens[], size_t n, size_t row) {
 
 Use wishful thinking to understand, in this problem, we need to find **all the solutions**, that is we will stop after we brute-force all the possible cases, so there is no restriction for our function type and it should be **void**.
 
-The highlighted code (Line 13) does the diagonal constraint check **after we have reached the last step - to put the last queen on our board**. However, this is actually very time consuming and will do lots of useless work.
+The highlighted code (Line 13) does the diagonal constraint check **after we have reached the last step - after we have put the last queen on our board**. However, this is actually very time consuming and will do lots of useless work.
 
 ### Find one solution
 
@@ -248,7 +248,7 @@ bool nqueens(char queens[], size_t n, size_t row) {
 
 Use wishful thinking to understand, what this function does is to find one solution/judge whether there is a solution or not, so obviously the type of the function should be **boolean**.
 
-Line 22 is to **modify/try our current solution**, and immediately after that, Line 23 is to check whether there is a solution to our smaller problem or not. If there is, then we rerturn **TRUE**, which means we have found a solution to our problem. And immediately after that, we return **TRUE** from our current function call, which means we have found a solution! (Use the call-stack diagram to understand that)
+Line 22 is to **modify/try our current solution**, and immediately after that, Line 23 is to check whether there is a solution to our smaller problem or not. If there is, then we rerturn **TRUE** (the `if` condition), which means we have found a solution to our problem. And immediately after that, we return **TRUE** (inside the `if` branch) from our current function call, which means we have found a solution! (Use the call-stack diagram to understand that)
 
 {% hint style="info" %}
 All the **return statements** indicate whether we have found a solution or not (including both trivial cases and the recursive/smaller problem cases).
