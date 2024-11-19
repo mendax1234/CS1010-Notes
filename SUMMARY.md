@@ -61,6 +61,8 @@
   * [PE2 (AY21/22)](past-year-exam/pe2-review/pe2-ay21-22.md)
   * [PE2 (AY22/23)](past-year-exam/pe2-review/pe2-ay22-23.md)
   * [PE2 (AY23/24)](past-year-exam/pe2-review/pe2-ay23-24.md)
+* [Final Paper](past-year-exam/final-paper/README.md)
+  * [Final (AY18/19)](past-year-exam/final-paper/final-ay18-19.md)
 
 ## Current Year Exam
 

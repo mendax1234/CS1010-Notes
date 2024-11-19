@@ -7,7 +7,67 @@
 ## C Preprocessing
 
 1. Use `#define` to define a constant to make your program more readable.
-2. Macros - Generic Type. `T` means type, can be any type
+
+### Macro
+
+A _macro_ is a code snippet that is substituted into the program and expanded during pre-processing.
+
+Example:
+
+{% code lineNumbers="true" %}
+```c
+#include "cs1010.h"
+#define SQUARE(x) x * x
+int main() {
+    // Will output 25
+    cs1010_println_long(SQUARE(5));
+    // Will output 16.0000
+    cs1010_println_double(SQUARE(4.0));
+    return 0;
+}
+```
+{% endcode %}
+
+#### Generic Types
+
+We can use a _generic type_ (or _type parameter_) to restrict the type of the arguments used in a macro.
+
+Example:
+
+{% code lineNumbers="true" %}
+```c
+#include "cs1010.h"
+#define SWAP(T, x, y) {T t; t = x; x = y; y = t}
+int main() {
+    long a = 1;
+    long b = 2;
+    SWAP(long, a, b); // Now a == 2 && b == 1
+    char m[4] = "abc";
+    char n[4] = "123";
+    SWAP(char *, m, n);
+    // Now m is "123" and n is "abc"
+    return 0;
+}
+```
+{% endcode %}
+
+#### Pitfall
+
+Be careful with situations like this:
+
+{% code lineNumbers="true" %}
+```c
+#include "cs1010.h"
+#define SQUARE(x) x * x
+int main() {
+    cs1010_println_long(SQUARE(5 + 1));
+    // The above gets expanded to 5 + 1 * 5 + 1
+    return 0;
+}
+```
+{% endcode %}
+
+Therefore, we should always use brackets around the arguments of a macro, i.e., `SQUARE(x) (x) * (x)` is safe.
 
 ## Bonus Info
 
