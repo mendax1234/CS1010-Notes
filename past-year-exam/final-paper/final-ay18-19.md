@@ -46,7 +46,11 @@ for (long i = 0; i < n/2; i += 2)
 ```
 {% endcode %}
 
-We may only pay attention to the **terminating condition** and the **loop changing condition** to decide the time complexity of the loop. In this problem, the time complexity for the outer loop is just . And for inner loop, it's just $$O(n/1)=O(n)$$. So, the overall time complexity will be $$O(n^2)$$.$$f(x) = x * e^{2 pi i \xi x}$$
+We may only pay attention to the **terminating condition** and the **loop changing condition** to decide the time complexity of the loop. In this problem, the time complexity for the outer loop is just . And for inner loop, it's just $$O(n/1)=O(n)$$. So, the overall time complexity will be $$O(n^2)$$.
+
+{% hint style="info" %}
+Note that this method of only look at **terminating condition** and **loop changing** condition works at most of the cases except for the **edge cases.** e.g. `for (i=0;...;i*=2)`, here it's an infinite loop and when the initialization involves terms of input `n`.
+{% endhint %}
 
 ### 8. Time Complexity
 
