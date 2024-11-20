@@ -2,10 +2,22 @@
 
 ## Problems
 
-Question paper and answers:
+Question paper without answers:
+
+{% file src="../../.gitbook/assets/final-1819-s1.pdf" %}
+Question without Answers
+{% endfile %}
+
+Question paper with answers:
 
 {% file src="../../.gitbook/assets/final-1819-s1-with-comments.pdf" %}
 Question with Answers
+{% endfile %}
+
+Answer sheet:
+
+{% file src="../../.gitbook/assets/final-1819-s1-sheet.pdf" %}
+Answer sheet
 {% endfile %}
 
 ### 3. String Manipulation
