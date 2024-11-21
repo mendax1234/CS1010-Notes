@@ -33,7 +33,7 @@ For option C, since in the `else-if` block, we can always say that `x <= y`, whi
 
 Whenever you encounter a flowchart that contains the below pattern,
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>Create a new <code>if</code> block</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/flowchart-attention.png" alt=""><figcaption><p>Create a new <code>if</code> block</p></figcaption></figure>
 
 Create a **new** `if` block when converting it into `C` code!!!
 
