@@ -1,10 +1,12 @@
----
-description: Thanks for today's lecturer Eldon Chung!
----
-
 # Lec 06 - Call Stacks, Arrays
 
-## Unit 13 Call Stack
+Slides:
+
+{% embed url="https://nus-cs1010.github.io/2425-s1/slides/cs1010-lec06.html#1" %}
+Lecture Slides
+{% endembed %}
+
+## Call Stack
 
 ### Stack Frame
 
@@ -37,7 +39,7 @@ Below is the stack frame diagram when the stack frame for `add()` is created.&#x
 This kind of diagram will be useful in future analysis about recursion and pointer. It may also come out in the exam paper.
 {% endhint %}
 
-## Unit 14 Fixed-Length Array
+## Fixed-Length Array
 
 ### Array Declaration
 

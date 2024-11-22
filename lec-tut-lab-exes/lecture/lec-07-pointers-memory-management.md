@@ -1,5 +1,11 @@
 # Lec 07 - Pointers, Memory management
 
+Slides:
+
+{% embed url="https://nus-cs1010.github.io/2425-s1/slides/cs1010-lec07.html#1" %}
+Lecture Slides
+{% endembed %}
+
 1. Use the "black box" idea to re-think about pointers.
 2. Two golden rules
 3. `malloc` and `calloc` the idea of "borrow" and heap, refer back to Eldon's explaining with `size_t`.

@@ -1,5 +1,11 @@
 # Lec 10 - More Recursion
 
+Slides:
+
+{% embed url="https://nus-cs1010.github.io/2425-s1/slides/cs1010-lec10.html#1" %}
+Lecture Slides
+{% endembed %}
+
 ## Tower of Hanoi
 
 The code to print out the solution to the tower of hanoi

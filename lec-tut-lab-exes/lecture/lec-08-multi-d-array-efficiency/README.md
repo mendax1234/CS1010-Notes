@@ -1,5 +1,11 @@
 # Lec 08 - Multi-d Array, Efficiency
 
+Slides:
+
+{% embed url="https://nus-cs1010.github.io/2425-s1/slides/cs1010-lec08.html#1" %}
+Lecture Slides
+{% endembed %}
+
 ## Multi-dimensional Array
 
 ### Pointer to a Fixed-Size Array

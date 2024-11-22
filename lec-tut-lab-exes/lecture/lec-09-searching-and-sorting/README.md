@@ -1,5 +1,11 @@
 # Lec 09 - Searching and Sorting
 
+Slides:
+
+{% embed url="https://nus-cs1010.github.io/2425-s1/slides/cs1010-lec09.html#1" %}
+Lecture Slides
+{% endembed %}
+
 ## Searching
 
 ### Linear Search
