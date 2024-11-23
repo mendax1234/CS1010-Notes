@@ -32,7 +32,7 @@ int hypotenuse_square;
 ```
 {% endcode %}
 
-_All variables must be declared with its corresponding type before used in C_. Indicating the type during declaration lets the computing device running the program knows how much memory should be reserved for the value of this variable, and subsequently, how to interpret the binary sequence stored associated with this variable.
+_All variables must be declared with its corresponding type before used in C_. Indicating the type during declaration lets the computing device running the program knows how much memory should be reserved for the value of this variable, and subsequently, how to interpret the binary sequence stored associated with this variable. (See [#types](lec-02-functions-and-types.md#types "mention") for deeper understanding)
 
 A variable is only visible within the innermost block that encloses the declaration, as specified by the `{` and `}`.
 

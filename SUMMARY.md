@@ -5,6 +5,7 @@
 ## Lec/Tut/Lab/Exes
 
 * [Lecture](lec-tut-lab-exes/lecture/README.md)
+  * [Lec 02 - Functions and Types](lec-tut-lab-exes/lecture/lec-02-functions-and-types.md)
   * [Lec 03 - Basic C Programming](lec-tut-lab-exes/lecture/lec-03-basic-c-programming.md)
   * [Lec 04 - Conditionals](lec-tut-lab-exes/lecture/lec-04-conditionals.md)
   * [Lec 05 - Loops](lec-tut-lab-exes/lecture/lec-05-loops.md)
