@@ -5,6 +5,7 @@
 ## Lec/Tut/Lab/Exes
 
 * [Lecture](lec-tut-lab-exes/lecture/README.md)
+  * [Lec 04 - Conditionals](lec-tut-lab-exes/lecture/lec-04-conditionals.md)
   * [Lec 05 - Loops](lec-tut-lab-exes/lecture/lec-05-loops.md)
   * [Lec 06 - Call Stacks, Arrays](lec-tut-lab-exes/lecture/lec-06-call-stacks-arrays/README.md)
     * [Diagnostic Quiz](lec-tut-lab-exes/lecture/lec-06-call-stacks-arrays/diagnostic-quiz.md)
