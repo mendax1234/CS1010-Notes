@@ -70,6 +70,8 @@ cs1010_println_pointer(&matrix[0][0]); // address of a long
 ```
 {% endcode %}
 
+From this example, by observing each pair of the new lines that have the same meaning. We can see the essence of array decay is: If we have a 2-D array `matrix`, then `matrix` will decay to `&matrix[0]`. Similarly, `matrix[0]` will decay to `&matrix[0][0]`.
+
 {% hint style="info" %}
 Add an `&` operator [add one "array" degree](#user-content-fn-2)[^2].
 {% endhint %}

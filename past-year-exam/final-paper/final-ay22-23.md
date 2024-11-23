@@ -97,7 +97,7 @@ The most important thing to note is inside `baz()` to call `qux()`, we are actua
 
 ## Tips
 
-1. Include the five [#array-name-decay-multidimensional-array](../../lec-tut-lab-exes/lecture/lec-08-multi-d-array-efficiency/#array-name-decay-multidimensional-array "mention") examples in the cheatsheet.
+1. Include the five [#array-name-decay-multidimensional-array](../../lec-tut-lab-exes/lecture/lec-08-multi-d-array-efficiency/#array-name-decay-multidimensional-array "mention") examples in the cheatsheet and include the small observation behind the examples into the cheatsheet also.
 
 [^1]: An **element** here doesn't need to be of a basic data type, like `long`, `double`. It can be an array also!
 
