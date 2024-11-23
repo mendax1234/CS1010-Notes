@@ -134,7 +134,7 @@ Then all we need to do is to **find pattern**, the first pattern I found when do
 
 <summary>Reason for loop invariant <span class="math">x=n\% k</span> to be wrong</summary>
 
-Take a look at our loop, the **loop condition** is $$x \geq k$$. So, if our input are two **negative numbers** (let's say `n = -16, k = -4`), based on this program, our `x` will remain the same as `n` and `y` will remain the same as `0`. But according to the definition of the **loop invariant**, it must hold true before we enter the loop. And before we enter the loop, our loop invariant is $$x=n\%k=-16 ~\% -4=0$$, but our program says `x` will remain the same as `n`, which means `x` should be -16**.** Contradiction! So, our loop invariant $$x=n\%k$$ is incorrect.
+Take a look at our loop, the **loop condition** is $$x \geq k$$. So, if our input are two **negative numbers** (let's say `n = -16, k = -4`), based on this program, our `x` will remain the same as `n` and `y` will remain the same as `0`. But according to the definition of the **loop invariant**, it must hold true before we enter the loop. And before we enter the loop, our loop invariant is $$x=n\%k=-16 ~\% -4=0$$, but our program says `x` will remain the same as `n`, which means `x` should be -1&#x36;**.** Contradiction! So, our loop invariant $$x=n\%k$$ is incorrect.
 
 </details>
 

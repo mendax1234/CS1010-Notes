@@ -54,6 +54,26 @@ The first one defines a pointer to a fixed-size array of length 20 (Actually it 
 
 <figure><img src="../../../.gitbook/assets/pointer-to-fixed-size-array.png" alt=""><figcaption><p>Pointer to a Fixed-array</p></figcaption></figure>
 
+### Array Name Decay (Multidimensional Array)
+
+In a multi-dimensional array, the [#array-name-decay](../lec-06-call-stacks-arrays/#array-name-decay "mention") we have seen before still applies, but now it becomes a bit trickier.
+
+Since an array in C consists only of a contiguous region of memory that stores the elements of the array, the address of an array is the same as the address of the first element[^1] of the array. The following five statements would print out exactly the same values.
+
+{% code lineNumbers="true" %}
+```c
+cs1010_println_pointer(matrix);        // address of a 1D array
+cs1010_println_pointer(matrix[0]);     // address of a long 
+cs1010_println_pointer(&matrix);       // address of a 2D array 
+cs1010_println_pointer(&matrix[0]);    // address of a 1D array
+cs1010_println_pointer(&matrix[0][0]); // address of a long
+```
+{% endcode %}
+
+{% hint style="info" %}
+Add an `&` operator [add one "array" degree](#user-content-fn-2)[^2].
+{% endhint %}
+
 ### A Fixed-Size Array of Dynamically Allocated Array
 
 #### Contiguous Memory Allocation
@@ -174,3 +194,7 @@ When you expand the gemetric sequence, suppose the common ratio is $$q$$ and the
 
 Knowing the last term in the geometric sequence, a quickest way to get the number of terms is to do the logarithmic operation. e.g. Suppose the last term is $$a_n$$, then $$n=log_q(a_n)$$$$f(x) = x * e^{2 pi i \xi x}$$$$\frac{q^n}$$
 {% endhint %}
+
+[^1]: An **element** here doesn't need to be of a basic data type, like `long`, `double`. It can be an array also!
+
+[^2]: e.g. 1D array to 2D array. `long` to 1D array

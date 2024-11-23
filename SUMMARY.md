@@ -67,6 +67,7 @@
   * [Final (AY18/19)](past-year-exam/final-paper/final-ay18-19.md)
   * [Final (AY20/21)](past-year-exam/final-paper/final-ay20-21.md)
   * [Final (AY21/22)](past-year-exam/final-paper/final-ay21-22.md)
+  * [Final (AY22/23)](past-year-exam/final-paper/final-ay22-23.md)
 
 ## Current Year Exam
 
