@@ -14,7 +14,7 @@ To make the functions that you write reusable and composable, you should create 
 
 Recall from Unit 1 that machine code and data manipulated by machine code are all stored as a sequence of binaries, 1s and 0s, in the memory. Each unit of either 1 or 0 is known as a _bit_. 8 bits form a _byte_.
 
-Remember from [Unit 2](https://nus-cs1010.github.io/2425-s1/notes/02-algo.html) that the value of a variable is stored in a memory location as a sequence of bits. These bits have to be interpreted by the machine code to be given a meaning. Does a sequence of 1s and 0s represent an integer? A pixel of an image? A sound sample in an audio clip? A month? As a programmer, we have to tag the variable with its _type_, so that the machine code knows how to interpret the sequence of bits. In addition, the type also tells the machine code, how many bits "belong" to this variable. The number of bits of a type is also known as the _size_ of a type.
+Remember from [lec-01-computational-problem-solving.md](lec-01-computational-problem-solving.md "mention") that the value of a variable is stored in a memory location as a sequence of bits. These bits have to be interpreted by the machine code to be given a meaning. Does a sequence of 1s and 0s represent an integer? A pixel of an image? A sound sample in an audio clip? A month? As a programmer, we have to tag the variable with its _type_, so that the machine code knows how to interpret the sequence of bits. In addition, the type also tells the machine code, how many bits "belong" to this variable. The number of bits of a type is also known as the _size_ of a type.
 
 ### Real Numbers
 
