@@ -79,3 +79,44 @@ long *array_ptr = a;
 {% hint style="info" %}
 If you really want to let the array name become a pointer, see [#pointer-to-a-fixed-size-array](../lec-08-multi-d-array-efficiency/#pointer-to-a-fixed-size-array "mention")
 {% endhint %}
+
+### Pass an array to a function
+
+Array is passed by _reference_ in C. Consider the code below:
+
+{% code lineNumbers="true" %}
+```c
+void foo(long a[2]) {
+  a[0] = a[1];
+}
+
+int main()
+{
+  long a[2] = {100, 200};
+  foo(a);
+  cs1010_println_long(a[0]);
+  cs1010_println_long(a[1]);
+}
+```
+{% endcode %}
+
+When we call `foo`, we push the _memory address_ of the array (i.e., of the first element of the array), on the stack. With this memory address, `foo` can now read the elements of the array `a[0]` and `a[1]`, by accessing the memory of the array on the stack frame of `main`. If `foo` modifies to the array, then the array on the stack frame of `main` is updated as well.
+
+<figure><img src="../../../.gitbook/assets/pass-by-reference.png" alt=""><figcaption><p>Pass by reference</p></figcaption></figure>
+
+This mechanism of passing arguments into a function is called _"pass by reference"_, as opposed to _"pass by value"_, in which we make a copy of the variable on the stack.
+
+Knowing that, let's take a closer look at the declaration of `foo`, and gain some deeper understanding about passing array to a function in C.
+
+```c
+void foo(long a[2]) {
+  a[0] = a[1];
+}
+```
+
+Here, the parameter `long a[2]`, as you can see from the stack frame figure, actually creates a new **pointer variable** called `a` on `foo`'s stack frame. And the content/value of the pointer `a` is the memory address of the array `a` which is on the `main`'s stack frame.
+
+This informs us that in C, whenever we pass an array to a function, we are
+
+1. create a **local pointer variable** in that function's stack frame
+2. when we call the function (usually we will pass the memory address of the array using [#array-name-decay](./#array-name-decay "mention")), then the address of the array we passed will be stored in this **local pointer variable**.
