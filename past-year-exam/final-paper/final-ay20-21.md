@@ -20,7 +20,7 @@ String Literal is stored in a **read-only memory location, which is not stack!!!
 
 ### 9. Illegal Memory Access
 
-In this problem, we can summarise the following four cases when illegal Memory access happens:
+In this problem, we can summarise the following four cases when illegal memory access happens:
 
 1. When you return an address on the stack that has been "cleared"
 
@@ -34,7 +34,7 @@ long *bar()
 ```
 {% endcode %}
 
-2. When you return an uninitialized pointer
+2. When you try to write to (access) the address stored in an **unintialized pointer**.
 
 {% code lineNumbers="true" %}
 ```c
@@ -47,7 +47,7 @@ long *bar()
 ```
 {% endcode %}
 
-3. When you did not allocate enough memory **on the heap** for the variable that a pointer points to
+3. When you did not allocate enough memory **on the heap** for the variable that a pointer points to. And you try to "access" the pointer by trying to write value into it.
 
 {% code lineNumbers="true" %}
 ```c
@@ -107,5 +107,3 @@ And it is only when we define a pointer that points to the read-only memory regi
 The (f) part is similar to AY22/23 Q14. Can compare and study later.
 
 For now, I would say one possible way to reason is to see **how many swap times we need to move the correct number to the correct position**. For example, if our input is 4321, to move 4 to the last, in this algorithm, we need 4 swaps. (Although it is not the case you move 4 all the way to the last like what we have seen in the bubble sort algorithm, the actual case is when you move 4 to a "temp" place, you will move 3 to a "temp" place also, which may be a little bit consuing. But anyway, the total swap times we need is 4 for the number 4). Similarly, for 3, we need 3 moves. So, for the input `n`, we just need the sum from 1 to n, which is $$O(N^2)$$.
-
-## Tips

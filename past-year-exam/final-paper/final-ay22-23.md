@@ -81,7 +81,7 @@ bool can_sum_to (long a[], size_t i , size_t n, long q)
 ```
 {% endcode %}
 
-For the recursion part, it utilises the idea that we can narrow our list range by either using the `a[i]` to try forming our sum or not using the `a[i]` to form our sum.
+For the recursion part, it utilises the idea that we can narrow our list range by either using the `a[i]` to try forming our sum or **not** using the `a[i]` to form our sum.
 
 For the base case, every time we check whether our "updated" `q` is equal to the first element or not, if it is, means we can find one such combination that sums to `q` in the list. Otherwise, if the range of the list is 0 or negative, means that we cannot find such a combination.
 
