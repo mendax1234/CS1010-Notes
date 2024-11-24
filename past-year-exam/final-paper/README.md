@@ -34,7 +34,7 @@ str2[5] = '.';
 ```
 {% endcode %}
 
-The difference between the two is that `str1` points to a read-only region in the memory, while `str2` contains a **copy** of the string on the stack.
+The common between `str1` and `str2` is that both of themselves are **on the stack.** The difference between the two is that `str1` points to a read-only region in the memory (but `str1` itself is a pointer on the stack), while `str2` contains a **copy** of the string on the stack.
 
 > To create a copy of the string literal on the stack using `char` arrays, we have two methods:
 >
@@ -439,3 +439,7 @@ fgets(module_code, 7, stdin);
 4. **(Recursion)** For the recursion question, pay attention to **how many times of recursion calls** we will do every time. And, we need to think **all** cases to decide how we can modify e.g. to make the recursion finite.
 5. **(Memory Leak)** Whenever you call a `malloc()`, always be careful not to point the pointer to else where. This will cause memory leak!
 6. **(Uninitialized Variables)** Uninitialized variables can cause **unpredictable behavior** and lead to errors that are difficult to diagnose.
+7. **(Time Complexity**) Given that the running time of a **recursive** program is $$T(n)$$. The meaning of $$T(1)$$ means the running time of its **base case**. For the nqueens problem, $$T(1)$$ should be $$O(n^2)$$.
+8. **(Time Complexity)** The time complexity to print a string with length `n` is $$O(n)$$.
+9. **(Compilation Error vs. Runtime Error)** Errors that occur during compiling is called "compilation error". In constrast, errors that occured during execution of a program is called a "run-time error". e.g. When you access the "out of bound" index of an array, it won't generate **compilation error**, but it may generate **runtime error** or **undefined behavior**.
+10. (`const` behavior) An example is: `const long* a` means `a` is a pointer to const, and any attempt to write via `a` will error out. e.g. `*a=10`is invalid. This is different from `long* const a`, which declares a const pointer `a` that **cannot** be reassigned to point to another place. e.g. `a=<pointer>` is invalid.

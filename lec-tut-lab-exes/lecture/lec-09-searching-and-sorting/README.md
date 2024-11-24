@@ -69,7 +69,7 @@ Also, the procedure to derive the complexity is interesting and there may have s
 
 ### Counting Sort\*
 
-> This is the **only** sorting algorithm that has the chance to take $$O(N)$$ to sort a list.
+> This is the **only** sorting algorithm that has the chance to take $$O(n)$$ to sort a list.
 
 The soul of this algorithm is to build a "frequency table" and then use this table to construct the sorted result.
 
@@ -107,7 +107,7 @@ void counting_sort(size_t len, const long in[], long out[])
 
 ### Selection Sort\*
 
-> The time complexity is $$O(N^2)$$
+> The time complexity is $$O(n^2)$$
 
 The soul of this algorithm is to 1) partition the list into two parts, an unsorted part followed by a sorted part, 2) repeatedly **selects the maximum element from the unsorted part** and **move it to the front of the sorted part**. (For increasing sort).
 
@@ -159,7 +159,7 @@ void selection_sort(size_t n, long list[])
 
 ### Bubble Sort\*
 
-> The time complexity is $$O(N^2)$$
+> The time complexity is $$O(n^2)$$
 
 The idea is that this algorithm sorts the largest number to the end until the beginning by a series of **bubble pass**. In each pass, we look for all possible adjacent pairs of items. Any adjacent pair that is out of order is swapped so that they are in order. So, after each pass, we will **move the largest number to its correct position** and in the next pass, we will exclude it.
 
@@ -209,7 +209,7 @@ void insertion_sort(size_t n, long a[]) {
 
 ## Tips
 
-1. One thing to note is that every time you see time complexity $$O(logN)$$ in the question, try to think of binary search.
+1. One thing to note is that every time you see time complexity $$O(\log n)$$ in the question, try to think of binary search.
 2.  When implementing the search algorithm, always keep in mind:
 
     1. How to define our search range (The use of index is inclusive or not)

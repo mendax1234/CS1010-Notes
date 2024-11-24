@@ -101,7 +101,7 @@ str2[5] = '.';
 ```
 {% endcode %}
 
-The difference between the two is that `str1` points to a read-only region in the memory, while `str2` contains a **copy** of the string on the stack.
+The common between `str1` and `str2` is that both of themselves are **on the stack.** The difference between the two is that `str1` points to a read-only region in the memory (but `str1` itself is a pointer on the stack), while `str2` contains a **copy** of the string on the stack.
 
 {% hint style="info" %}
 To create a copy of the string literal on the stack using arrays, we have two methods:

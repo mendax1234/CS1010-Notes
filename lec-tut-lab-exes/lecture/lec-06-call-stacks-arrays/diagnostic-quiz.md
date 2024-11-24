@@ -1,33 +1,38 @@
 # Diagnostic Quiz
 
-## Key Knoledge Points
+## Problems
 
-### What is stored in Stack Frame?
+### 8. Compilation Error vs. Runtime Error
 
-A stack frame stores **function parameters** and **local variables.**
+> Suppose we have the following array declaration:
+>
+> ```c
+> long per_burger[5] = {3, 2, 1, 15, 5};
+> ```
+>
+> Try out the following code.  Which one would generate a compilation **error**?
 
-### **Compilation Error or Undefined Error**
+See the difference between compilation error and runtime error at [#compilation-error-vs.-run-time-error](../lec-03-basic-c-programming.md#compilation-error-vs.-run-time-error "mention") in Lec 03.
 
-### "const" in C
+### 11. `const` in C
 
-## Valuable Quetions
+> Consider the function declaration below:
+>
+> ```c
+> void bar(const long a[]) { }
+> ```
+>
+> Which of the following statement is FALSE?
 
-### Question 8
+In C, the `const` keyword applies to the thing **immediately to its left** (or, if there's nothing to the left, it applies to the thing to its right).
 
-Suppose we have the following array declaration:
+So, in this problem, it means we cannot change any element in the array `a`. But since `a` is also a pointer variable (See more explanation [here](https://piazza.com/class/lz3qhq0epwf53k/post/103) about why it is not merely an address due to array decay), we can set it to another array.
 
-```c
-long per_burger[5] = {3, 2, 1, 15, 5};
-```
+`const long* a` means `a` is a pointer to const, and any attempt to write via `a` will error out. e.g. `*a=10`is invalid.
 
-Try out the following code.  Which one would generate a compilation **error**?
+This is different from `long* const a`, which declares a const pointer `a` that **cannot** be reassigned to point to another place. e.g. `a=<pointer>` is invalid.
 
-### Question 11
+## Tips
 
-Consider the function declaration below:
-
-```c
-void bar(const long a[]) { }
-```
-
-Which of the following statement is FALSE?
+1. A stack frame stores **function parameters** and **local variables.**
+2. When you access the "out of bound" index of an array, it won't generate **compilation error**, but it may generate **runtime error** or **undefined behavior**.

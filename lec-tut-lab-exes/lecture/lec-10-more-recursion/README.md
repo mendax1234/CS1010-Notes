@@ -109,6 +109,10 @@ Why is `swap()` so awesome? Wait for lecture slides to be uploaded
 
 The recurrence relation here is $$T(n)=nT(n-1)+n$$. And its time complexity is $$O(n\cdot n!)$$
 
+{% hint style="info" %}
+Note that in Permutations, $$T(1)=n$$, since we need to print out the string of length $$n$$, it is $$O(n)$$. Amazing right!
+{% endhint %}
+
 ### Tips
 
 1. The Permutation Problem gives us a method on how to do recursion in a tree-like graph below (traverse to the deepest node then return back[^1]), this idea will be pretty important in the following [#n-queens](./#n-queens "mention") problem below also.
@@ -307,5 +311,9 @@ bool nqueens(char queens[], long n, long row) {
 </code></pre>
 
 This is equivalent to adding another `if` structure outside our call recursion call.
+
+{% hint style="info" %}
+Given that solving the nqueens problems takes $$T(n)$$, then $$T(1)=O(n^2)$$ . See [#id-5.-time-complexity-for-nqueens](diagnostic-quiz.md#id-5.-time-complexity-for-nqueens "mention") for the explanation!
+{% endhint %}
 
 [^1]: What the highlighted Line 20 does is to return back and start a new branch.

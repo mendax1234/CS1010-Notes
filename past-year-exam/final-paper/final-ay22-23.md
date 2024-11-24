@@ -28,7 +28,7 @@ See [#array-name-decay-multidimensional-array](../../lec-tut-lab-exes/lecture/le
 
 > Since an array in C consists only of a contiguous region of memory that stores the elements of the array, the address of an array is the same as the address of the first element[^1] of the array.
 
-With this information, `image + 1`, first, use the knowledge of [#pointer-arithmetic](../../lec-tut-lab-exes/lecture/lec-07-pointers-memory-management.md#pointer-arithmetic "mention"), the pointer `image` points to an array of `long *`, so `+1` will move it to the second row. So, it has the **type** as the second row (an array) and its **value** is the address of the first `long` in the row.
+With this information, `image + 1`, first, use the knowledge of [#pointer-arithmetic](../../lec-tut-lab-exes/lecture/lec-07-pointers-memory-management/#pointer-arithmetic "mention"), the pointer `image` points to an array of `long *`, so `+1` will move it to the second row. So, it has the **type** as the second row (an array) and its **value** is the address of the first `long` in the row.
 
 However, `&image[1][0], &image[0][1], &image[1][1]` all have the **type** as a `long`, which is not an array. For `image[0] + 1`, it has the [wrong **type**](#user-content-fn-2)[^2], and its value is the second `long` in the first row! Wrong also.
 

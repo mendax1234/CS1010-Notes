@@ -15,3 +15,5 @@ The OS will allocate a contiguous section memory to store the 36 double in this 
 ### 18. About Deriving the time complexity of a recursion
 
 > This question is worth trying before the final
+
+This is not that hard. Same as how you derive $$T(n)=2T(n/2)+1$$.
