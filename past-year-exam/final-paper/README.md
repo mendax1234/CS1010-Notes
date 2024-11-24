@@ -302,6 +302,47 @@ Its call stack diagram looks as follows:
 
 The most important thing to note is that inside `baz()` to call `qux()`, we are actually passing the address of the `num` and `ptr` which are in the `main()`! So the pointer should point to these two variables in the `main()`, instead of pointing to the temp variable in the `baz()`!
 
+### Sorting
+
+Below is the table summarises the running time for different sorting algorithms under different cases:
+
+<figure><img src="../../.gitbook/assets/best-worst-case-time-sorting.png" alt=""><figcaption></figcaption></figure>
+
+Below is the table that summarises the number of _swaps_ each sorting algorithm needs under different cases:
+
+| Sorting algorithm | Sorted array (best case) | Inversely array (worst case) | General array (average case) |
+| ----------------- | ------------------------ | ---------------------------- | ---------------------------- |
+| Bubble Sort       | 0                        | $$O(n^2)$$                   | $$O(n^2)$$                   |
+| Insertion Sort    | 0                        | $$O(n^2)$$                   | $$O(n^2)$$                   |
+| Selection Sort    | $$O(n)$$                 | $$O(n)$$                     | $$O(n)$$                     |
+
+#### Comparison between Insertion Sort, Bubble Sort and Selection Sort
+
+**Insertion Sort**
+
+1. **Fast for nearly sorted lists:** Insertion sort performs well on almost sorted arrays, requiring minimal comparisons and shifts.
+2. **Efficient for small datasets:** Insertion sort is simple and efficient for small arrays due to low overhead.
+3. **Adaptive nature:** It naturally adapts to the degree of disorder in the input, reducing unnecessary operations for sorted or nearly sorted inputs.
+
+**Bubble Sort**
+
+1. **Detects sorted arrays quickly (with optimization):** If implemented with an early-exit condition, Bubble Sort can terminate early when no swaps are made in a pass.
+2. **Simple to implement:** Bubble Sort is conceptually easy to understand and implement for basic sorting tasks.
+3. **Stable sorting:** It preserves the relative order of equal elements, making it useful in certain situations.
+
+**Selection Sort**
+
+1. **Good for minimizing swaps:** Selection Sort is ideal when the cost of swapping elements is significant since it performs exactly $$n-1$$ swaps.
+2. **Predictable performance:** The number of comparisons and swaps is independent of the input's order, making its behavior predictable.
+3. **Useful for memory-constrained environments:** Selection Sort requires minimal extra memory as it sorts in place.
+
+**Counting Sort**
+
+1. **Efficient for small range of integers:** Counting sort works exceptionally well when the range of input elements (the difference between the maximum and minimum values) is small relative to the number of elements.
+2. **Linear time complexity for small integer ranges:** When the range of values is not large, Counting Sort can achieve **O(n + k)** time complexity, where nnn is the number of elements and kkk is the range of the input.
+3. **Stable sorting:** Counting Sort is stable, meaning it preserves the relative order of elements with equal values.
+4. **Non-comparison-based:** It doesn’t rely on comparisons between elements, making it faster than comparison-based sorts (like Bubble, Insertion, or Selection Sort) for certain types of data.
+
 ### Struct
 
 Using `typedef` on `struct` frees us from typing the word `struct` every time. We can do so with either:
@@ -442,4 +483,5 @@ fgets(module_code, 7, stdin);
 7. **(Time Complexity**) Given that the running time of a **recursive** program is $$T(n)$$. The meaning of $$T(1)$$ means the running time of its **base case**. For the nqueens problem, $$T(1)$$ should be $$O(n^2)$$.
 8. **(Time Complexity)** The time complexity to print a string with length `n` is $$O(n)$$.
 9. **(Compilation Error vs. Runtime Error)** Errors that occur during compiling is called "compilation error". In constrast, errors that occured during execution of a program is called a "run-time error". e.g. When you access the "out of bound" index of an array, it won't generate **compilation error**, but it may generate **runtime error** or **undefined behavior**.
-10. (`const` behavior) An example is: `const long* a` means `a` is a pointer to const, and any attempt to write via `a` will error out. e.g. `*a=10`is invalid. This is different from `long* const a`, which declares a const pointer `a` that **cannot** be reassigned to point to another place. e.g. `a=<pointer>` is invalid.
+10. **(`const` behavior)** An example is: `const long* a` means `a` is a pointer to const, and any attempt to write via `a` will error out. e.g. `*a=10`is invalid. This is different from `long* const a`, which declares a const pointer `a` that **cannot** be reassigned to point to another place. e.g. `a=<pointer>` is invalid.
+11. **(Insertion Sort)** Insertion sort is **fast** when it comes to sorting an _almost sorted_ list.
