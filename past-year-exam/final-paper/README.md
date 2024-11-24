@@ -4,7 +4,7 @@
 
 ### String Manipulation
 
-When working with strings in C, always account for the null character by stopping the loop at `len - 1` (excluding) to avoid overwriting it. For example,
+When working with strings in C, always account for the null character by stopping the loop at `len - 1` (excluding) to avoid overwriting the null character. For example,
 
 {% code lineNumbers="true" %}
 ```c
@@ -19,7 +19,7 @@ cs1010_println_string(str);
 
 ### String Literal
 
-A _string literal_ refers to a string written between two `"` characters, such as `"Hello world!"`. And it is stored in a read-only memory region (not the stack).
+A _string literal_ refers to a string written between two `"` characters, such as `"Hello world!"`. And it is stored in a read-only memory region (**not the stack**).
 
 {% code lineNumbers="true" %}
 ```c
@@ -36,18 +36,18 @@ str2[5] = '.';
 
 The difference between the two is that `str1` points to a read-only region in the memory, while `str2` contains a **copy** of the string on the stack.
 
-> From this question, we can see that to create a copy of the string literal on the stack using arrays, we have two methods:
+> To create a copy of the string literal on the stack using `char` arrays, we have two methods:
 >
 > 1. `char str[]` or
-> 2. `char str[num]`, where `num` is an integer number
+> 2. `char str[num]`, where `num` is an integer number specifying the string's length
 >
-> And it is only when we define a pointer that points to the read-only memory region can't we modify its content.
+> And it is only when we **define a pointer** that points to the read-only memory region **can't** we modify its content.
 
 ### **Illegal Memory Access**
 
 _Illegal Memory Access_ needs to satisfy two requirements:
 
-1. the memory address is **Illegal** (NULL and the examples in [9. Illegal Memory Access](https://wenbo-notes.gitbook.io/cs1010-notes/past-year-exam/final-paper/final-ay20-21#id-9.-illegal-memory-access) which appears in Final (AY20/21))
+1. the memory address is **Illegal** (`NULL` and the [#examples-for-illegal-memory-access](./#examples-for-illegal-memory-access "mention") in below)
 2. you try to access the memory address
 
 In this the code below:
@@ -76,7 +76,7 @@ long *a = malloc(n * sizeof(long *));
 ```
 {% endcode %}
 
-Here `a` should be a pointer pointing to an array of `long`, but here you assume it should be pointing to to an array of `long *`. The implementation above is wrong. The correct one should be
+Here `a` should be a pointer pointing to an array of `long`, but here you assume it should be pointing to an array of `long *`. The implementation above is wrong. The correct one should be as follows:
 
 {% code lineNumbers="true" %}
 ```c
@@ -84,7 +84,7 @@ long **a = malloc(n * sizeof(long *));
 ```
 {% endcode %}
 
-#### **Examples**
+#### **Examples for Illegal Memory Access**
 
 1. When you return an address on the stack that has been "cleared"
 
@@ -138,9 +138,9 @@ long *bar()
 
 ### Multidimensional Array
 
-#### Array Name Decay in Mutidimensional Array
+#### Array Name Decay
 
-Since an array in C consists only of a contiguous region of memory that stores the elements of the array, the address of an array is the same as the address of the first element (An **element** here doesn't need to be of a basic data type, like `long`, `double`. It can be an array also!) of the array. The following five statements would print out exactly the same values.
+Since an array in C consists only of a contiguous region of memory that stores the elements of the array, the address of an array is the same as the address of the first element of the array. (An **element** here doesn't need to be of a basic data type, like `long`, `double`. It can be an array also!) The following five statements would print out exactly the same values.
 
 {% code lineNumbers="true" %}
 ```c
@@ -185,7 +185,7 @@ free(buckets[0])
 >
 > Accoding to the Linux Programmer's Manual, `void free(void *ptr)` should follow:
 >
-> The `free()` function frees the memory space pointed to by ptr, which must have been returned by a previous call to `malloc()`, `calloc()`, or `realloc()`. Otherwise, or if `free(ptr)` has already been called before, undefined behavior occurs. If `ptr` is NULL, no operation is performed.
+> The `free()` function frees the memory space pointed to by `ptr`, which must have been returned by a previous call to `malloc()`, `calloc()`, or `realloc()`. Otherwise, or if `free(ptr)` has already been called before, undefined behavior occurs. If `ptr` is NULL, no operation is performed.
 >
 > In our case, due to array-decay, `buckets` is not a "heap-object" returned by `malloc()`, `calloc()`, or `realloc()`. Rather, it is an "stack-object", so we cannot pass `buckets` directly into `free()`. If so, we will get warnings from the compiler.
 
@@ -242,7 +242,7 @@ for (long i = 0; i < n/2; i += 2)
 
 In this problem, the time complexity for the outer loop is just $$O(n/2/2)=O(n/4)=O(n)$$. And for inner loop, it's just $$O(n/1)=O(n)$$. So, the overall time complexity will be $$O(n^2)$$.
 
-> Note that this method of only look at **terminating condition** and **loop changing** condition works at most of the cases except for
+> Note that this method works at most of the cases except for
 >
 > 1. the **edge cases.** e.g. `for (i=0;i<n;i*=2)`, here it's an infinite loop and
 > 2. when the initialization involves terms of input `n`. e.g. `for(i=n;i<n+1;i+=1)`.
@@ -255,19 +255,19 @@ For instance, which one grows faster? $$f(n)=n^n$$ or $$g(n)=2^n$$? Pick $$n=1$$
 
 #### Some ready results
 
-1. Both $$T(n)=n+\frac{n}{2}+\frac{n}{4}+\frac{n}{8}+\cdots+1$$ and $$T(n)=1+2+4+\cdots+n$$ have the time complexity $$O(n)$$.$$T(n)=1+2+4+\cdots+n=O(n)$$
+1. $$T(n)=n+\frac{n}{2}+\frac{n}{4}+\frac{n}{8}+\cdots+1$$ or its equivalent $$T(n)=1+2+4+\cdots+n$$ has the time complexity $$O(n)$$.
 2. $$T(n)=nT(n/2)+1$$ and $$T(n)=nT(n/2)+n$$ have the same time complexity as $$O(n^{logn})$$
 3. $$T(n)=2T(n-1)+1$$, its time complexity is $$O(2^n)$$
 4. $$T(n)=T(\frac{n}{2})+\log n$$, its time complexity is $$O(\log^2n)=O(\log n\cdot \log n)$$
 
 #### Useful Calculation Tips
 
-1. When you expand the gemetric sequence, suppose the common ratio is $$q$$ and the first term is $$a_0$$. Then the sum can be expressed as $$\frac{a_0\cdot(q^n-1)}{q-1}$$, where $$n$$ is the **number of terms** in this geometric sequence.
-2. Knowing the last term in the geometric sequence, a quick way to get the **number of terms** in the geometric sequence is to do the **logarithmic operation**. e.g. Suppose the last term is $$a_n$$, then $$n=log_q(a_n)$$
+1. When you expand the geometric sequence, suppose the common ratio is $$q$$ and the first term is $$a_0$$. Then the sum can be expressed as $$\frac{a_0\cdot(q^n-1)}{q-1}$$, where $$n$$ is the **number of terms** in this geometric sequence.
+2. Knowing the last term in the geometric sequence, a quick way to get the **number of terms** in the geometric sequence is to do the **logarithmic operation**. e.g. Suppose the last term is $$a_n$$ and the common ratio is $$q$$, then $$n=log_q(a_n)$$
 
 ### Call Stack Diagram
 
-The quesition is to draw the stack diagram for the following code:
+For the following code:
 
 {% code lineNumbers="true" %}
 ```c
@@ -295,11 +295,11 @@ int main()
 ```
 {% endcode %}
 
-The answer should be:
+Its call stack diagram looks as follows:
 
 <figure><img src="../../.gitbook/assets/Final-2223-Q15.png" alt="" width="563"><figcaption><p>Stack Diagram with Pointer &#x26; Double Pointers</p></figcaption></figure>
 
-The most important thing to note is inside `baz()` to call `qux()`, we are actually passing the address of the `num` and `ptr` in the `main()`! So the pointer should point to these two variables in the `main()`, instead of pointing to the temp variable in the `baz()`!
+The most important thing to note is that inside `baz()` to call `qux()`, we are actually passing the address of the `num` and `ptr` which are in the `main()`! So the pointer should point to these two variables in the `main()`, instead of pointing to the temp variable in the `baz()`!
 
 ### Struct
 
@@ -434,7 +434,7 @@ fgets(module_code, 7, stdin);
 
 1. **(Variable and Proof)** For `long` variables, it can be **negative!** Always try to think about negative number when trying to form the counter example.
 2. **(Variable and Proof)** The keyword "if and only if" needs to prove **both forwardly and reversely**!
-3. **(Loop Invariant)** To find the correct one, think more about **what the code is doing** rather than **giving out the exact expression directly** because sometimes the loop invariant even cannot be expressed in the exact expression. e.g. in this problem, the **strong** and **correct** loop invariant is "the minimum element of the array is in `a[l .. r]`"
-4. **(Recursion)** For the recursion question, pay attention to how many times of recursion calls we will do every time. And, we need to think **all** cases to decide how we can modify e.g. to make the recursion finite.
+3. **(Loop Invariant)** To find the correct loop invariant, think more about **what the code is doing** rather than **giving out the exact expression directly** because sometimes the loop invariant even cannot be expressed in the exact expression. e.g. in one of the final papers' question, the **strong** and **correct** loop invariant is "the minimum element of the array is in `a[l .. r]`"
+4. **(Recursion)** For the recursion question, pay attention to **how many times of recursion calls** we will do every time. And, we need to think **all** cases to decide how we can modify e.g. to make the recursion finite.
 5. **(Memory Leak)** Whenever you call a `malloc()`, always be careful not to point the pointer to else where. This will cause memory leak!
 6. **(Uninitialized Variables)** Uninitialized variables can cause **unpredictable behavior** and lead to errors that are difficult to diagnose.
