@@ -347,7 +347,7 @@ module cs1010e;
 
 The specifier controls the interpretation of the argument. `s` for string, `c` for character, `d` for integer (base 10), `f` for floating-point number, `p` for pointer (base 16). We can additionally prepend this with _length modifier_. `ld` for `long` integer, `lld` for `long long`, and `lf` for `double`.
 
-To format the output, we can prepend it with a number to indicate its _field width_, or minimum space used when printing. E.g., `%3d` will pad the number printed with space if the number printed is less than 3 digits. Adding a _flag_ 0 in front, `%03d`, will pad the number with 0s if the number printed is less than 3 digits. For floating-point numbers, we can additionally control the _precision_, or the number of digits printed after the decimal point. e.g. `%3.4lf` will print a double to four decimal points. The first 3 indicates that if the whole floating point number (integer + floating parts + 1 for the `.`) is less than length 3, white spaces will be padded at front. Otherwise, nothing will be padded.
+To format the output, we can prepend it with a number to indicate its _field width_, or minimum space used when printing. E.g., `%3d` will pad the number printed with **space** if the number printed is less than 3 digits. Adding a _flag_ 0 in front, `%03d`, will pad the number with 0s if the number printed is less than 3 digits. For floating-point numbers, we can additionally control the _precision_, or the number of digits printed after the decimal point. e.g. `%3.4lf` will print a double to four decimal points. The first 3 indicates that if the whole floating point number (integer + floating parts + 1 for the `.`) is less than length 3, white spaces will be padded at front. Otherwise, nothing will be padded.
 
 Some examples:
 
@@ -358,7 +358,7 @@ printf("%10.4lf\n", 10.0);
 printf("%3.4lf\n", 10.0);
 //10.0000
 printf("%3d\n", 10);
-//  0
+// 10
 printf("%3d\n",10000);
 //10000
 ```
@@ -409,7 +409,12 @@ When `scanf()` is finished parsing into a string, it appends the null character 
 
 `fgets()` does a simple thing, it reads up to a given maximum number of characters, but stops at a newline, which is read as well. In other words: _It reads a line of input._
 
-To read in a 6-letter module code (e.g., "CS1010") from the standard input? We can use
+There are two very nice things about this function for what we want to do:
+
+* The parameter for the maximum length accounts for the necessary `0` byte, so we can just pass the size of our variable.
+* The return value is either a pointer to `str` or `NULL` if, for any reason, nothing was read.
+
+To read in a 6-letter module code (e.g., "CS1010") from the standard input. We can use the following:
 
 {% code lineNumbers="true" %}
 ```c

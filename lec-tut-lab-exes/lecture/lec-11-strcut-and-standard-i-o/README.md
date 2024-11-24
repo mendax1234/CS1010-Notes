@@ -15,7 +15,7 @@ Just like a variable, a `struct` has a scope, and it follows the same rule as th
 {% code lineNumbers="true" %}
 ```c
 struct module {
-  char **code;
+  char *code;
   char *title;
   long mc;
 }
@@ -91,7 +91,7 @@ module cs1010e;
 
 The specifier controls the interpretation of the argument. `s` for string, `c` for character, `d` for integer (base 10), `f` for floating-point number, `p` for pointer (base 16). We can additionally prepend this with _length modifier_. `ld` for `long` integer, `lld` for `long long`, and `lf` for `double`.
 
-To format the output, we can prepend it with a number to indicate its _field width_, or minimum space used when printing. E.g., `%3d` will pad the number printed with space if the number printed is less than 3 digits. Adding a _flag_ 0 in front, `%03d`, will pad the number with 0s if the number printed is less than 3 digits. For floating-point numbers, we can additionally control the _precision_, or the number of digits printed after the decimal point. e.g. `%3.4lf` will print a double to four decimal points. The first 3 indicates that if the whole floating point number (integer + floating parts + 1 for the `.`) is less than length 3, white spaces will be padded at front. Otherwise, nothing will be padded.
+To format the output, we can prepend it with a number to indicate its _field width_, or minimum space used when printing. E.g., `%3d` will pad the number printed with **space** if the number printed is less than 3 digits. Adding a _flag_ 0 in front, `%03d`, will pad the number with 0s if the number printed is less than 3 digits. For floating-point numbers, we can additionally control the _precision_, or the number of digits printed after the decimal point. e.g. `%3.4lf` will print a double to four decimal points. The first 3 indicates that if the whole floating point number (integer + floating parts + 1 for the `.`) is less than length 3, white spaces will be padded at front. Otherwise, nothing will be padded.
 
 Some examples:
 
@@ -102,7 +102,7 @@ printf("%10.4lf\n", 10.0);
 printf("%3.4lf\n", 10.0);
 //10.0000
 printf("%3d\n", 10);
-//  0
+// 10
 printf("%3d\n",10000);
 //10000
 ```
@@ -323,7 +323,7 @@ int main(void)
 ```
 {% endcode %}
 
-Yes, this program works and doesn't have any _undefined behavior_\*)[^1], but I guess you don't like very much that nothing at all happens when you just press enter, because `scanf()` is skipping it and continues to wait for input that can be matched.
+Yes, this program works and doesn't have any [_undefined behavior_](#user-content-fn-1)[^1]), but I guess you don't like very much that nothing at all happens when you just press enter, because `scanf()` is skipping it and continues to wait for input that can be matched.
 
 #### Read a number with scanf
 
@@ -333,7 +333,7 @@ Rule 4: `scanf()` is a _very powerful_ function. (and with great power comes gre
 
 A lot of parsing work can be done with `scanf()` in a very _concise_ way, which can be very nice, but it also has many pitfalls and there are tasks (such as reading a line of input) that are much simpler to accomplish with a simpler function. Make sure you **understand the rules** presented here, and if in doubt, read the `scanf()` manual **precisely**.
 
-That being said, here's an example how to read a number with retries using `scanf()`:
+That being said, here's an example on how to read a number with retries using `scanf()`:
 
 {% code lineNumbers="true" %}
 ```c
@@ -363,7 +363,7 @@ int main(void)
 ```
 {% endcode %}
 
-It's not as nice as the version [using `strtol()`](https://sekrit.de/webdocs/c/beginners-guide-away-from-scanf.html), because there is no way to tell `scanf()` **not** to skip whitespace for `%d` -- so if you just hit `Enter`, it will still wait for your input -- but it works and it's a really short program.
+It's not as nice as the version [using](https://sekrit.de/webdocs/c/beginners-guide-away-from-scanf.html) `strtol()`, because there is no way to tell `scanf()` **not** to skip whitespace for `%d` -- so if you just hit `Enter`, it will still wait for your input -- but it works and it's a really short program.
 
 ### fgets
 
@@ -451,4 +451,4 @@ At last, I really want to thanks this amazing wesbite, it's legit awesome and us
 
 {% embed url="https://sekrit.de/webdocs/c/beginners-guide-away-from-scanf.html" %}
 
-[^1]: \*) actually, this isn't even entirely true. This program _still_ has _undefined behavior_ for empty input. You could force this on a Linux console hitting `Ctrl+D` for example. So, it's again an example for _code you should not write_.
+[^1]: actually, this isn't even entirely true. This program _still_ has _undefined behavior_ for empty input. You could force this on a Linux console hitting `Ctrl+D` for example. So, it's again an example for _code you should not write_.
