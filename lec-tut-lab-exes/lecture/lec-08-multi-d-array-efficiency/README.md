@@ -73,14 +73,14 @@ cs1010_println_pointer(&matrix[0][0]); // address of a long
 From this example, by observing each pair of the new lines that have the same meaning. We can see the essence of array decay is: If we have a 2-D array `matrix`, then `matrix` will decay to `&matrix[0]`. Similarly, `matrix[0]` will decay to `&matrix[0][0]`.
 
 {% hint style="info" %}
-Add an `&` operator [add one "array" degree](#user-content-fn-2)[^2].
+Add an `&` operator can be considered as [adding one "array" degree](#user-content-fn-2)[^2].
 {% endhint %}
 
 ### A Fixed-Size Array of Dynamically Allocated Array
 
 #### Contiguous Memory Allocation
 
-In the code below, 10 is the `num_of_rows`. What we have done here is to allocate a chunk of memory with size `num_of_cols * 10` once. After that, we point the 10 pointers to the correct position.
+In the code below, 10 is the `num_of_rows`. What we have done here is to allocate a chunk of memory with size `num_of_cols * 10` once. After that, we **iteratively** point the remaining 9 pointers to the correct position.
 
 {% code lineNumbers="true" %}
 ```c
@@ -182,7 +182,7 @@ T(n) &= nT(1) + \frac{n}{2} + \dots + 4 + 2 + 1 \\
 \end{aligned}
 $$
 
-This term $$n/2+\cdots+2+1$$ is a geometric series with a coefficient of 1 and a common ratio of 2. Its sum can be represented as follows, which is less than $$n$$
+This term $$\frac{n}{2}+\cdots+2+1$$ is a geometric series with a coefficient of 1 and a common ratio of 2. Its sum can be represented as follows, which is less than $$n$$
 
 $$
 \begin{aligned}
@@ -192,9 +192,9 @@ $$
 $$
 
 {% hint style="info" %}
-When you expand the gemetric sequence, suppose the common ratio is $$q$$ and the first term is $$a_0$$ then the sum can be expressed as $$\frac{a_0\cdot(q^n-1)}{q-1}$$, where $$n$$ is the number of terms in this geometric sequence.
+When you expand the gemetric sequence, suppose the common ratio is $$q$$ and the first term is $$a_0$$. Then the sum can be expressed as $$\frac{a_0\cdot(q^n-1)}{q-1}$$, where $$n$$ is the **number of terms** in this geometric sequence.
 
-Knowing the last term in the geometric sequence, a quickest way to get the number of terms is to do the logarithmic operation. e.g. Suppose the last term is $$a_n$$, then $$n=log_q(a_n)$$$$f(x) = x * e^{2 pi i \xi x}$$$$\frac{q^n}$$
+Knowing the last term in the geometric sequence, a quick way to get the **number of terms** in the geometric sequence is to do the **logarithmic operation**. e.g. Suppose the last term is $$a_n$$, then $$n=log_q(a_n)$$$$f(x) = x * e^{2 pi i \xi x}$$$$\frac{q^n}$$
 {% endhint %}
 
 [^1]: An **element** here doesn't need to be of a basic data type, like `long`, `double`. It can be an array also!

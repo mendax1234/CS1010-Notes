@@ -51,14 +51,14 @@ For a loop like below:
 ```c
 for (long i = 0; i < n/2; i += 2)
 {
-  for (logn j = i/2; j < n; j += 1)
+  for (long j = i/2; j < n; j += 1)
   {
   }
 }
 ```
 {% endcode %}
 
-To judeg its time complexity quickly, we can only pay attention to the **terminating condition** and the **loop changing condition** to decide the time complexity of the loop. In this problem, the time complexity for the outer loop is just $$O(n/2/2)=O(n/4)=O(n)$$. And for inner loop, it's just $$O(n/1)=O(n)$$. So, the overall time complexity will be $$O(n^2)$$.
+To judge its time complexity quickly, we can only pay attention to the **terminating condition** and the **loop changing condition** to decide the time complexity of the loop. In this problem, the time complexity for the outer loop is just $$O(n/2/2)=O(n/4)=O(n)$$. And for inner loop, it's just $$O(n/1)=O(n)$$. So, the overall time complexity will be $$O(n^2)$$.
 
 {% hint style="info" %}
 Note that this method of only look at **terminating condition** and **loop changing** condition works at most of the cases except for

@@ -16,7 +16,7 @@ Question with Answers
 
 ### 5. Recursion
 
-In this question, every time we need to make **two** recursive calls. So, we need to think both cases to decide how we an modify to make the recursion finite!
+In this question, every time we need to make **two** recursive calls. So, we need to think both cases to decide how we can modify to make the recursion finite!
 
 ### 6. Memory Leak
 
