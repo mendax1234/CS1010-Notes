@@ -258,6 +258,7 @@ For instance, which one grows faster? $$f(n)=n^n$$ or $$g(n)=2^n$$? Pick $$n=1$$
 1. Both $$T(n)=n+\frac{n}{2}+\frac{n}{4}+\frac{n}{8}+\cdots+1$$ and $$T(n)=1+2+4+\cdots+n$$ have the time complexity $$O(n)$$.$$T(n)=1+2+4+\cdots+n=O(n)$$
 2. $$T(n)=nT(n/2)+1$$ and $$T(n)=nT(n/2)+n$$ have the same time complexity as $$O(n^{logn})$$
 3. $$T(n)=2T(n-1)+1$$, its time complexity is $$O(2^n)$$
+4. $$T(n)=T(\frac{n}{2})+\log n$$, its time complexity is $$O(\log^2n)=O(\log n\cdot \log n)$$
 
 #### Useful Calculation Tips
 
