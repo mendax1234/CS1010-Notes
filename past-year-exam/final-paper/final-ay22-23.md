@@ -59,7 +59,35 @@ If `list[0]` is NULL, as long as we don't access its memory address (read/write)
 We are allowed to have pointers pointing to **arbitrary region in memory**, but as long as we don’t [**access**](#user-content-fn-4)[^4] those memory, we are not doing anything illegal.
 {% endhint %}
 
-### 15. Call Stack Diagram
+### 15. Recursion
+
+The official solution for this problem is awesome!
+
+{% code lineNumbers="true" %}
+```c
+bool can_sum_to (long a[], size_t i , size_t n, long q)
+{
+  if (q == a[i])
+  {
+    return true;
+  }
+  if (i >= n - 1)
+  {
+    return false;
+  }
+  return can_sum_to(a, i + 1, n, q) || can_sum_to(a, i + 1, n , q - a[i])
+}
+
+```
+{% endcode %}
+
+For the recursion part, it utilises the idea that we can narrow our list range by either using the `a[i]` to try forming our sum or not using the `a[i]` to form our sum.
+
+For the base case, every time we check whether our "updated" `q` is equal to the first element or not, if it is, means we can find one such combination that sums to `q` in the list. Otherwise, if the range of the list is 0 or negative, means that we cannot find such a combination.
+
+The recurrence relation is $$T(n)=2T(n-1)+1$$. And use the basic knowledge of geometric sequence, we can get $$T(n)=O(2^n)$$.
+
+### 16. Call Stack Diagram
 
 The quesition is to draw the stack diagram for the following code:
 
