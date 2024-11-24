@@ -41,7 +41,11 @@ void print(long k, char source, char dest) {
 ```
 {% endcode %}
 
-In the `solve_tower_of_hanoi()`, Line 6 basically does **moving k-1 disks from `source` to the `placeholder`**, so when calling the function, the `dest` is our `placeholder`. Then Line 7 is the **actual move**, where we move the remaining **k** disk from `source` to `dest`. Line 8 does **moving the k-1 disks from the `placeholder` to the `dest`**, so when calling the `source` is our `placeholder`.
+In the `solve_tower_of_hanoi()`, Line 6 basically does **moving k-1 disks from `source` to the `placeholder`**, so when calling the function, the `dest` is our `placeholder`. Then Line 7 is the **actual move**, where we move the remaining **k**-th disk from `source` to `dest`. Line 8 does **moving the k-1 disks from the `placeholder` to the `dest`**, so when calling the `source` is our `placeholder`.
+
+### Running Time
+
+The recurrence relation in Tower of Hanoi problem is: $$T(k)=2T(k-1)+1$$, it time complexity is $$O(2^n)$$
 
 ### Tips
 
@@ -59,7 +63,7 @@ Suppose the problem we are facing now is to find all the permutations of a strin
 
 The base case is trivial, it is when we have one character left (same as we have reached the end of the string), just print this character.
 
-The recursive case, however, is not that trivial. Use wishful thinking, suppose that given a string of length `k`, we already know the all the permutations of its substring with length `k-1` (excluding itself). How can we find all the permutations of the string with length `k`? Since we have `k` options for the leading characters, so we need to iterate through these `k` options and find all their corresponding `k-1` permutations. And here comes the awesome idea of `swap()`.
+The recursive case, however, is not that trivial. Use wishful thinking, suppose that given a string of length `k`, we already know all the permutations of its substring with length `k-1` (excluding itself). How can we find all the permutations of the string with length `k`? Since we have `k` options for the leading character, so we need to iterate through these `k` options and find all their corresponding `k-1` permutations. And here comes the awesome idea of `swap()`.
 
 <pre class="language-c" data-title="Permutations.c" data-line-numbers><code class="lang-c">/**
  * Fix a[0]..a[curr - 1] but permute characters a[curr]..a[len - 1]
@@ -85,7 +89,7 @@ void permute(char a[], size_t len, size_t curr) {
 }
 </code></pre>
 
-where `swap(char a[], size_t i, size_t j)` just swaps the ith character with the jth character in string a.
+where `swap(char a[], size_t i, size_t j)` just swaps the `i`-th character with the `j`-th character in string `a`.
 
 {% code title="Swap.c" lineNumbers="true" %}
 ```c
@@ -100,6 +104,10 @@ void swap(char a[], size_t i, size_t j) {
 {% hint style="info" %}
 Why is `swap()` so awesome? Wait for lecture slides to be uploaded
 {% endhint %}
+
+### Running Time
+
+The recurrence relation here is $$T(n)=nT(n-1)+n$$. And its time complexity is $$O(n\cdot n!)$$
 
 ### Tips
 

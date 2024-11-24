@@ -256,9 +256,10 @@ For instance, which one grows faster? $$f(n)=n^n$$ or $$g(n)=2^n$$? Pick $$n=1$$
 #### Some ready results
 
 1. $$T(n)=n+\frac{n}{2}+\frac{n}{4}+\frac{n}{8}+\cdots+1$$ or its equivalent $$T(n)=1+2+4+\cdots+n$$ has the time complexity $$O(n)$$.
-2. $$T(n)=nT(n/2)+1$$ and $$T(n)=nT(n/2)+n$$ have the same time complexity as $$O(n^{logn})$$
-3. $$T(n)=2T(n-1)+1$$, its time complexity is $$O(2^n)$$
-4. $$T(n)=T(\frac{n}{2})+\log n$$, its time complexity is $$O(\log^2n)=O(\log n\cdot \log n)$$
+2. $$T(n)=2T(n-1)+1$$, its time complexity is $$O(2^n)$$. An example is the [#tower-of-hanoi](../../lec-tut-lab-exes/lecture/lec-10-more-recursion/#tower-of-hanoi "mention")
+3. $$T(n)=T(\frac{n}{2})+\log n$$, its time complexity is $$O(\log^2n)=O(\log n\cdot \log n)$$
+4. &#x20;$$T(n)=nT(n-1)+n$$ and $$T(n)=nT(n-1)+1$$ have the same time complexity as $$O(n\cdot n!)$$. An example is the [#permutations](../../lec-tut-lab-exes/lecture/lec-10-more-recursion/#permutations "mention")
+5. $$T(n)=nT(n/2)+1$$ and $$T(n)=nT(n/2)+n$$ have the same time complexity as $$O(n^{logn})$$
 
 #### Useful Calculation Tips
 
