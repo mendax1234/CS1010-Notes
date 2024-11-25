@@ -12,6 +12,8 @@ This reminds me of the working principle of calling a program in C. Indeed, we a
 
 So, in this question, after calling `inn`, we move over stack pointer back to memory location that stores the instruction `inn(p)` (this will have the effect of "destroying" the `inn` stack frame, but actually it is not destroyed!) and maybe our `pc` will contain the address of the next instruction to be executed, which is `cs1010_println_long(*p[1])`. And then, we will execute the "print" instruction here. But notice or not, the content in the memory location of `inn` stack frame is still there! So theoritically speaking, we can still access that location and won't generate any error (from the computer organization side).
 
+> Okie, I just found that I am probably wrong, when calling `inn`, we are branching to another location maybe. :joy: Nvm, wait for future me to correct this bah hahahaha
+
 And another reason why we are lucky (still get 30) is because we are not calling other functions, which will overwrite the content in the `inn` stack frame).
 
 ### 12. Recursion
