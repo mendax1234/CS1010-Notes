@@ -140,7 +140,7 @@ long *bar()
 
 #### Array Name Decay
 
-Since an array in C consists only of a contiguous region of memory that stores the elements of the array, the address of an array is the same as the address of the first element of the array. (An **element** here doesn't need to be of a basic data type, like `long`, `double`. It can be an array also!) The following five statements would print out exactly the same values.
+Since an array in C consists only of a contiguous region of memory that stores the elements of the array, the address of an array is the same as the address of the first element of the array. (An **element** here doesn't need to be of a basic data type, like `long`, `double`. It can be a pointer variable also!) The following five statements would print out exactly the same values.
 
 {% code lineNumbers="true" %}
 ```c
@@ -306,15 +306,25 @@ The most important thing to note is that inside `baz()` to call `qux()`, we are 
 
 Below is the table summarises the running time for different sorting algorithms under different cases:
 
-<figure><img src="../../.gitbook/assets/best-worst-case-time-sorting.png" alt=""><figcaption></figcaption></figure>
+| Algorithms     | Best-Case                                                                                                                                                | Worst-Case | Average    |
+| -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | ---------- |
+| Bubble Sort    | <p><span class="math">O(n)</span> (<a data-footnote-ref href="#user-content-fn-1">optimized</a>)<br><span class="math">O(n^2)</span> (not optimized)</p> | $$O(n^2)$$ | $$O(n^2)$$ |
+| Insertion Sort | $$O(n)$$                                                                                                                                                 | $$O(n^2)$$ | $$O(n^2)$$ |
+| Selection Sort | $$O(n^2)$$                                                                                                                                               | $$O(n^2)$$ | $$O(n^2)$$ |
+
+
 
 Below is the table that summarises the number of _swaps_ each sorting algorithm needs under different cases:
 
-| Sorting algorithm | Sorted array (best case) | Inversely array (worst case) | General array (average case) |
-| ----------------- | ------------------------ | ---------------------------- | ---------------------------- |
-| Bubble Sort       | 0                        | $$O(n^2)$$                   | $$O(n^2)$$                   |
-| Insertion Sort    | 0                        | $$O(n^2)$$                   | $$O(n^2)$$                   |
-| Selection Sort    | $$O(n)$$                 | $$O(n)$$                     | $$O(n)$$                     |
+| Sorting algorithm | Sorted array (best case) | Inversely sorted array (worst case) | General array (average case) |
+| ----------------- | ------------------------ | ----------------------------------- | ---------------------------- |
+| Bubble Sort       | 0                        | $$O(n^2)$$                          | $$O(n^2)$$                   |
+| Insertion Sort    | 0                        | $$O(n^2)$$                          | $$O(n^2)$$                   |
+| Selection Sort    | $$O(n)$$                 | $$O(n)$$                            | $$O(n)$$                     |
+
+{% hint style="info" %}
+Note that for Selection Sort, if the input is a sorted array, every time we will swap tje element with itself! So, it needs $$O(n)$$
+{% endhint %}
 
 #### Comparison between Insertion Sort, Bubble Sort and Selection Sort
 
@@ -485,3 +495,5 @@ fgets(module_code, 7, stdin);
 9. **(Compilation Error vs. Runtime Error)** Errors that occur during compiling is called "compilation error". In constrast, errors that occured during execution of a program is called a "run-time error". e.g. When you access the "out of bound" index of an array, it won't generate **compilation error**, but it may generate **runtime error** or **undefined behavior**.
 10. **(`const` behavior)** An example is: `const long* a` means `a` is a pointer to const, and any attempt to write via `a` will error out. e.g. `*a=10`is invalid. This is different from `long* const a`, which declares a const pointer `a` that **cannot** be reassigned to point to another place. e.g. `a=<pointer>` is invalid.
 11. **(Insertion Sort)** Insertion sort is **fast** when it comes to sorting an _almost sorted_ list.
+
+[^1]: it means if there is no swap, we will exit

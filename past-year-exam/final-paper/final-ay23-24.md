@@ -20,7 +20,7 @@ Question with Answers
 
 Here is the table summarise the best-case, worst-case time complexity for different sorting algorithms:
 
-<figure><img src="../../.gitbook/assets/best-worst-case-time-sorting.png" alt=""><figcaption><p>Best-case / Worst-case sorting time complexity</p></figcaption></figure>
+<figure><img src="broken-reference" alt=""><figcaption><p>Best-case / Worst-case sorting time complexity</p></figcaption></figure>
 
 ### 12. Sorting
 
