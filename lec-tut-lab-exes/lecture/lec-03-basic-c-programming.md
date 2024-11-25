@@ -40,6 +40,29 @@ A variable is only visible within the innermost block that encloses the declarat
 
 Errors that occur during compiling is called "compilation error". In constrast, errors that occured during execution of a program is called a "run-time error".
 
+However, in real life in C, you may encounter the following **three** errors/warnings:
+
+#### Compilation Warning
+
+A **compilation warning** is a message provided by the compiler that indicates potential issues in the code, but **does not prevent** the code from compiling or running.
+
+* **Example**: Unused variables or deprecated functions. While the program can still run, warnings suggest areas that might cause problems or be improved in the future.
+* **Impact**: The code still compiles and runs, but you should address warnings for better code quality.
+
+#### Compilation Error
+
+A **compilation error** is a mistake in the code that **prevents** the program from being compiled into an executable.
+
+* **Example**: Syntax errors (like missing semicolons, undeclared variables, or incorrect function calls). The compiler cannot generate machine code due to these errors.
+* **Impact**: The program doesn't compile at all. You need to fix the error before the code can be run.
+
+#### Run-Time Error
+
+A **run-time error** occurs while the program is running and leads to abnormal behavior or crashes.
+
+* **Example**: A **segmentation fault** occurs when the program tries to access an illegal memory location, such as dereferencing a null pointer or accessing out-of-bounds array indices.
+* **Impact**: The program crashes or behaves unexpectedly while running, and the error needs to be fixed to ensure stability.
+
 ## CS1010 I/O
 
 ### Standard Input and Standard Output
