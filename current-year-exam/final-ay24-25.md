@@ -4,6 +4,8 @@
 
 ### 11. Call Stack Diagram
 
+The first tricky point is in the declaration of the function `inn`. Here `long *p[2]` seems to create an array, however, it is actually declaring a pointer to pointer here! And when drawing the call stack diagram, you should only draw one variable, which is a pointer to pointer that points to the `p` in the `main`. (See more at [#pass-an-array-to-a-function](../lec-tut-lab-exes/lecture/lec-06-call-stacks-arrays/#pass-an-array-to-a-function "mention"))
+
 The tricky point in this question actually lies in "printing" part. Is it a _crash_ or _undefined behavoir_? Not too sure for now.
 
 But an interesting point here is that the actual output of this program is "30". That's crazy right! This let's me have a deeper thinking about what's happening here. Now, the question is, how is the stack frame of `inn` not cleared/destroyed?

@@ -1,5 +1,11 @@
 # Lec 02 - Functions and Types
 
+Slides:
+
+{% embed url="https://nus-cs1010.github.io/2425-s1/slides/cs1010-lec02.html#1" %}
+Lecture Slides
+{% endembed %}
+
 ## Functions
 
 Thinking in terms of functions has the advantage that is: given a function, we only need to worry about _what_ it does, but not _how_ it is done. We can treat a function as a black box with well-defined behavior -- given one or more inputs, it will produce a value satisfying certain conditions, i.e., it solves a computational problem.

@@ -120,3 +120,7 @@ This informs us that in C, whenever we pass an array to a function, we are
 
 1. create a **local pointer variable** in that function's stack frame
 2. when we call the function (usually we will pass the memory address of the array using [#array-name-decay](./#array-name-decay "mention")), then the address of the array we passed will be stored in this **local pointer variable**.
+
+{% hint style="info" %}
+This is tested in [#id-11.-call-stack-diagram](../../../current-year-exam/final-ay24-25.md#id-11.-call-stack-diagram "mention")in Final (AY24/25)!
+{% endhint %}
