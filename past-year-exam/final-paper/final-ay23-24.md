@@ -1,6 +1,6 @@
 # Final (AY23/24)
 
-## Problems
+Problems
 
 Question paper without answers:
 
@@ -20,7 +20,11 @@ Question with Answers
 
 Here is the table summarise the best-case, worst-case time complexity for different sorting algorithms:
 
-<figure><img src="broken-reference" alt=""><figcaption><p>Best-case / Worst-case sorting time complexity</p></figcaption></figure>
+| Sorting algorithm | Sorted array (best case) | Inversely sorted array (worst case) | General array (average case) |
+| ----------------- | ------------------------ | ----------------------------------- | ---------------------------- |
+| Bubble Sort       | 0                        | $$O(n^2)$$                          | $$O(n^2)$$                   |
+| Insertion Sort    | 0                        | $$O(n^2)$$                          | $$O(n^2)$$                   |
+| Selection Sort    | $$O(n)$$                 | $$O(n)$$                            | $$O(n)$$                     |
 
 ### 12. Sorting
 
