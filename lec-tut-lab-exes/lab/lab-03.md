@@ -2,7 +2,13 @@
 description: Thanks for my Lab Tutor Zhang Puyu!
 ---
 
-# Lab 03
+# Lab 03 - Assert
+
+Slides:
+
+{% file src="../../.gitbook/assets/Lab3.pdf" %}
+Lab 3 Slides
+{% endfile %}
 
 ## Exercise 1 Review
 
@@ -89,11 +95,7 @@ A solution that uses **no condition** is that $$m=n+(n\%2)*(n\%2)+1$$, where $$m
 
 #### The Deriving process
 
-<div data-full-width="false">
-
-<figure><img src="../../lab/.gitbook/assets/odd.png" alt=""><figcaption><p>odd.c</p></figcaption></figure>
-
-</div>
+<div data-full-width="false"><figure><img src="../../lab/.gitbook/assets/odd.png" alt=""><figcaption><p>odd.c</p></figcaption></figure></div>
 
 ### multiple.c
 

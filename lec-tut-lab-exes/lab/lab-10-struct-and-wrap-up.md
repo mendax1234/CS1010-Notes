@@ -1,5 +1,11 @@
 # Lab 10 - Struct and Wrap up
 
+Slides:
+
+{% file src="../../.gitbook/assets/Lab10.pdf" %}
+Lab 10 Slides
+{% endfile %}
+
 ## Exercise 8
 
 ## Preamble to OOP: struct

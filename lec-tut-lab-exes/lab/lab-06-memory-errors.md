@@ -1,5 +1,11 @@
 # Lab 06 - Memory Errors
 
+Slides:
+
+{% file src="../../.gitbook/assets/Lab6.pdf" %}
+Lab 6 Slides
+{% endfile %}
+
 ## Exercise 3 Review
 
 ### Max

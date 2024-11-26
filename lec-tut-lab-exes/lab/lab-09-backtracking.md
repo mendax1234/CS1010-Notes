@@ -1,5 +1,11 @@
 # Lab 09 - Backtracking
 
+Slides:
+
+{% file src="../../.gitbook/assets/Lab9.pdf" %}
+Lab 9 Slides
+{% endfile %}
+
 ## Exercise 6
 
 ### 4. Marks

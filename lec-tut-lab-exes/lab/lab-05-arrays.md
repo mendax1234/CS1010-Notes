@@ -1,4 +1,10 @@
-# Lab 05
+# Lab 05 - Arrays
+
+Slides:
+
+{% file src="../../.gitbook/assets/Lab5.pdf" %}
+Lab 5 Slides
+{% endfile %}
 
 ## Pointers
 

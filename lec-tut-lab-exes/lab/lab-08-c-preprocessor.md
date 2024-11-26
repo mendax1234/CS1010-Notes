@@ -1,8 +1,14 @@
 # Lab 08 - C Preprocessor
 
+Slides:
+
+{% file src="../../.gitbook/assets/Lab8.pdf" %}
+Lab 8 Slides
+{% endfile %}
+
 ## Exercise 5
 
-1. [#char-cs1010\_read\_line\_arraysize\_t-k](../../past-year-exam/pe1-review/#char-cs1010\_read\_line\_arraysize\_t-k "mention") will include the `\n` character.
+1. [#char-cs1010\_read\_line\_arraysize\_t-k](../../past-year-exam/pe1-review/#char-cs1010_read_line_arraysize_t-k "mention") will include the `\n` character.
 
 ## C Preprocessing
 

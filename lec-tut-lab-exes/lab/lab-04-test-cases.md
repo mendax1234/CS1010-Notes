@@ -4,6 +4,12 @@ description: Thanks for my Lab Tutor Zhang Puyu
 
 # Lab 04 - Test Cases
 
+Slides:
+
+{% file src="../../.gitbook/assets/Lab4.pdf" %}
+Lab 4 Slides
+{% endfile %}
+
 ## Testing
 
 ### Some conventions
@@ -139,7 +145,7 @@ Number of operations in the worst case: upper-bounded by $$nlog(log(n))$$ (fewer
 
 The proof is far beyond the scope of this course and contains much mathematical knowledge. I haven't digged deep into it but below are some useful resources:
 
-1. [https://en.wikipedia.org/wiki/Divergence\_of\_the\_sum\_of\_the\_reciprocals\_of\_the\_primes#Proof\_that\_the\_series\_exhibits\_log-log\_growth](https://en.wikipedia.org/wiki/Divergence\_of\_the\_sum\_of\_the\_reciprocals\_of\_the\_primes#Proof\_that\_the\_series\_exhibits\_log-log\_growth)
+1. [https://en.wikipedia.org/wiki/Divergence\_of\_the\_sum\_of\_the\_reciprocals\_of\_the\_primes#Proof\_that\_the\_series\_exhibits\_log-log\_growth](https://en.wikipedia.org/wiki/Divergence_of_the_sum_of_the_reciprocals_of_the_primes#Proof_that_the_series_exhibits_log-log_growth)
 2. [https://github.com/Z-Puyu/lecture-notes/blob/MA2214-Combinatorics-and-Graphs-I/Combinatorics%20and%20Graphs%20I.pdf](https://github.com/Z-Puyu/lecture-notes/blob/MA2214-Combinatorics-and-Graphs-I/Combinatorics%20and%20Graphs%20I.pdf)(Page 30)
 
 </details>

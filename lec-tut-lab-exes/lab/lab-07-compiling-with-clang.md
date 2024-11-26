@@ -1,5 +1,11 @@
 # Lab 07 - Compiling with Clang
 
+Slides:
+
+{% file src="../../.gitbook/assets/Lab7.pdf" %}
+Lab 7 Slides
+{% endfile %}
+
 ## Exercise 4 Review
 
 ### Dynamic Array

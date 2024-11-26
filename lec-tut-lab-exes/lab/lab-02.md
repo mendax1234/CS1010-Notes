@@ -2,7 +2,13 @@
 description: Thanks for my Lab Tutor Zhang Puyu!
 ---
 
-# Lab 02
+# Lab 02 - Debugging
+
+Slides:
+
+{% file src="../../.gitbook/assets/Lab2.pdf" %}
+Lab 2 Slides
+{% endfile %}
 
 ## Selected Problems from Exercise 1
 
