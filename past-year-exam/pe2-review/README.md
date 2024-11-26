@@ -157,7 +157,7 @@ Based on the same assumption above, our `dst` is always smaller than or equal to
 
 #### replace()
 
-A complete function that uses [#is\_match](./#is\_match "mention"), [#substitute](./#substitute "mention") and [#compact](./#compact "mention") above to achieve the purpose that after the execution of the function, all the `serach_for` substrings that have appeared in the source string will be replaced with the `replace_with` string.
+A complete function that uses [#is\_match](./#is_match "mention"), [#substitute](./#substitute "mention") and [#compact](./#compact "mention") above to achieve the purpose that after the execution of the function, all the `serach_for` substrings that have appeared in the source string will be replaced with the `replace_with` string.
 
 {% code title="Replace.c" lineNumbers="true" %}
 ```c
@@ -682,3 +682,15 @@ bool nqueens(char queens[], long n, long row) {
     2. When to stop our searching (How to decide the search is successful or not)
 
     In the classic [#binary-search](./#binary-search "mention"), our search range is all the number bewteen `list[i]` and `list[j]` (both inclusive). And there are two cases we should stop our searching: 1) when there is no element in our search range, 2) when `list[mid]` is what we want to find.
+
+## Valuable Problems from Past Year
+
+Below are the valueable problems I think are important or classic
+
+{% file src="../../.gitbook/assets/Cheatsheet_range (2).pdf" %}
+Valueable Problems from Past Year
+{% endfile %}
+
+{% hint style="info" %}
+Here the number refers to the exact pages in the corresponding past year papers' **comments** version.
+{% endhint %}

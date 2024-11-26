@@ -496,4 +496,16 @@ fgets(module_code, 7, stdin);
 10. **(`const` behavior)** An example is: `const long* a` means `a` is a pointer to const, and any attempt to write via `a` will error out. e.g. `*a=10`is invalid. This is different from `long* const a`, which declares a const pointer `a` that **cannot** be reassigned to point to another place. e.g. `a=<pointer>` is invalid.
 11. **(Insertion Sort)** Insertion sort is **fast** when it comes to sorting an _almost sorted_ list.
 
+## Valuable Problems from Past Year
+
+Below are the problems from past year that I think are important:
+
+{% file src="../../.gitbook/assets/Cheatsheet_Range.pdf" %}
+Valuable Problems from Past Year
+{% endfile %}
+
+{% hint style="info" %}
+Here the number refers to the exact pages in the corresponding past year papers' **comments** version.
+{% endhint %}
+
 [^1]: it means if there is no swap, we will exit
