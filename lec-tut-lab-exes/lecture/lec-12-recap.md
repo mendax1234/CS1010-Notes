@@ -81,7 +81,7 @@ C Plus Plus Reference
 
 > These content are covered in [lab-08-c-preprocessor.md](../lab/lab-08-c-preprocessor.md "mention")
 
-We focused on writing clean code. Not just code that works. That's why [#functions](lec-12-recap.md#functions "mention"), we've mentioned we should write functions that are small and do one thing.
+We focused on writing clean code. Not just code that works. That's why in [#functions](lec-12-recap.md#functions "mention"), we've mentioned that we should write functions that are small and do one thing.
 
 <figure><img src="../../.gitbook/assets/cs1010-meme-01.png" alt="" width="563"><figcaption></figcaption></figure>
 
@@ -117,7 +117,7 @@ We focused on writing clean code. Not just code that works. That's why [#functio
 * Solve them one-by-one
 * Compose them back to solve the original problem
 
-> There are many valueable Exercises that legit legit practice this "Decomposition" idea!
+> There are many valuable Exercises that legit legit practice this "Decomposition" idea!
 
 #### Recursion
 
@@ -215,7 +215,7 @@ Ways to solve problems
 * Abstraction
 * Algorithms
 
-Now, it comes to the end of the recap of the content covered in CS1010. It's a bit disappointing because why the time passes so fast :sob:. But, stay strong and be optimistic, there will be more challenging but interesting courses about coding waing for you (CS2040C, CS3230, etc).
+Now, it comes to the end of the recap of the content covered in CS1010. It's a bit disappointing because why the time passes so fast :sob:. But, stay strong and be optimistic, there will be more challenging but interesting courses about coding waiting for you (CS2040C, CS3230, etc).
 
 Still remember from Lec 1, Prof Ooi told us:
 
