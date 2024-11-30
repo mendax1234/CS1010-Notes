@@ -188,7 +188,7 @@ George Polya said: "If you can't solve a problem, there is an easier problem tha
 * Adapt to change
 * Generalize to other domain
 
-#### Data Abstraction
+**Data Abstraction**
 
 > Model the problem with only the necessary information
 
@@ -233,7 +233,7 @@ What great word of advice! After these intense and tough "trainings" by CS1010, 
 
 At last, there is "One more thing..." as usual:
 
-## Special Thanks to
+## Special Thanks to...
 
 From Prof Ooi:
 
