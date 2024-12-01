@@ -68,6 +68,16 @@ Another key takeaway from this course is the development of **computational thin
     If you don’t perform well in a PE, don’t feel discouraged—it doesn’t define your programming ability (trust me, my PEs weren’t stellar either :joy:). As this is just your first programming course, you still have **three and a half years** to improve. Remember, coding is mostly about practice: **the more you practice, the more confident you’ll become at tackling problems.**
   * **Midterm and Final Exams:** Compared to the PEs, the written exams are relatively easier. To prepare effectively, focus on thoroughly studying the **Lecture Notes** and gaining a solid understanding of how a C program behaves. Mastering the foundational concepts and logic is key to performing well in these assessments.
 
+#### Course Book
+
+**Textbook**: The text book provided by the CS1010 Teaching Team is _Modern C_ by Jens Gustedt. To be honest, I didn't read this textbook :joy:, so I cannot comment on whether it's good or not.
+
+<figure><img src=".gitbook/assets/CS1010_Textbook.jpg" alt="" width="188"><figcaption><p>CS1010 Text Book</p></figcaption></figure>
+
+**Reference book**: However, this reference book serves as my enlightenment "teacher" when learning C. It is _C Programming: A Modern Approach, 2nd Edition_ by K. N. King.
+
+<figure><img src=".gitbook/assets/CS1010_Referencebook.jpg" alt=""><figcaption><p>CS1010 Reference Book</p></figcaption></figure>
+
 ## Learning Experience
 
 As mentiond in the beginning,
