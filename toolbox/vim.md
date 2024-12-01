@@ -1,4 +1,5 @@
 # Vim
+
 ## Reformatting
 To indent **all the code**, use `gg=G`. Then all lines will be indented according to a specific style.
 
