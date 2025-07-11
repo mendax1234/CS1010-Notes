@@ -114,7 +114,7 @@ void foo(long a[2]) {
 }
 ```
 
-Here, the parameter `long a[2]`, as you can see from the stack frame figure, actually creates a new **pointer variable** called `a` on `foo`'s stack frame. And the content/value of the pointer `a` is the memory address of the array `a` which is on the `main`'s stack frame.
+Here, the parameter `long a[2]`, as you can see from the stack frame figure, actually creates a new **pointer variable** called `a` on `foo`'s stack frame. And the content/value of the pointer variable`a` is the memory address of the array `a` which is on the `main`'s stack frame.
 
 This informs us that in C, whenever we pass an array to a function, we are
 
@@ -122,5 +122,5 @@ This informs us that in C, whenever we pass an array to a function, we are
 2. when we call the function (usually we will pass the memory address of the array using [#array-name-decay](./#array-name-decay "mention")), then the address of the array we passed will be stored in this **local pointer variable**.
 
 {% hint style="info" %}
-This is tested in [#id-11.-call-stack-diagram](../../../current-year-exam/final-ay24-25.md#id-11.-call-stack-diagram "mention")in Final (AY24/25)!
+This is tested in [#id-11.-call-stack-diagram](../../../current-year-exam/final-ay24-25.md#id-11.-call-stack-diagram "mention") in Final (AY24/25)!
 {% endhint %}

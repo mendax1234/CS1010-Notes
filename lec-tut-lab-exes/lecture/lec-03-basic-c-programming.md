@@ -38,7 +38,7 @@ A variable is only visible within the innermost block that encloses the declarat
 
 ### Compilation Error vs. Run-Time Error
 
-Errors that occur during compiling is called "compilation error". In constrast, errors that occured during execution of a program is called a "run-time error".
+Errors that occur during compiling is called "compilation error". In constrast, errors that occur during execution of a program is called a "run-time error".
 
 However, in real life in C, you may encounter the following **three** errors/warnings:
 

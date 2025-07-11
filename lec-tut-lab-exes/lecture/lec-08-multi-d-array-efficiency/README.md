@@ -194,7 +194,7 @@ $$
 {% hint style="info" %}
 When you expand the gemetric sequence, suppose the common ratio is $$q$$ and the first term is $$a_0$$. Then the sum can be expressed as $$\frac{a_0\cdot(q^n-1)}{q-1}$$, where $$n$$ is the **number of terms** in this geometric sequence.
 
-Knowing the last term in the geometric sequence, a quick way to get the **number of terms** in the geometric sequence is to do the **logarithmic operation**. e.g. Suppose the last term is $$a_n$$, then $$n=log_q(a_n)$$$$f(x) = x * e^{2 pi i \xi x}$$$$\frac{q^n}$$
+Knowing the last term in the geometric sequence, a quick way to get the **number of terms** in the geometric sequence is to do the **logarithmic operation**. e.g. Suppose the last term is $$a_n$$, then $$n=log_q(a_n)$$.
 {% endhint %}
 
 [^1]: An **element** here doesn't need to be of a basic data type, like `long`, `double`. It can be an array also!

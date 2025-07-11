@@ -8,17 +8,17 @@ Lecture Slides
 
 ## Functions
 
-Thinking in terms of functions has the advantage that is: given a function, we only need to worry about _what_ it does, but not _how_ it is done. We can treat a function as a black box with well-defined behavior -- given one or more inputs, it will produce a value satisfying certain conditions, i.e., it solves a computational problem.
+Thinking in terms of functions has the advantage: given a function, we only need to worry about **what** it does, but not **how** it is done. We can treat a function as a black box with well-defined behavior -- given one or more inputs, it will produce a value satisfying certain conditions, i.e., it solves a computational problem.
 
 In fact, a C program is just a collection of functions calling each other.
 
 ### Writing Good Functions
 
-To make the functions that you write reusable and composable, you should create your functions in such a way that it _does one thing and one thing only_.
+To make the functions that you write reusable and composable, you should create your functions in such a way that it **does one thing and one thing only**.
 
 ## Types
 
-Recall from Unit 1 that machine code and data manipulated by machine code are all stored as a sequence of binaries, 1s and 0s, in the memory. Each unit of either 1 or 0 is known as a _bit_. 8 bits form a _byte_.
+Recall from Unit 1 that machine code and data manipulated by machine code are all stored as a sequence of binaries, 1s and 0s, in the memory. Each unit of either 1 or 0 is known as a _bit_. And 8 bits form a _byte_.
 
 Remember from [lec-01-computational-problem-solving.md](lec-01-computational-problem-solving.md "mention") that the value of a variable is stored in a memory location as a sequence of bits. These bits have to be interpreted by the machine code to be given a meaning. Does a sequence of 1s and 0s represent an integer? A pixel of an image? A sound sample in an audio clip? A month? As a programmer, we have to tag the variable with its _type_, so that the machine code knows how to interpret the sequence of bits. In addition, the type also tells the machine code, how many bits "belong" to this variable. The number of bits of a type is also known as the _size_ of a type.
 
